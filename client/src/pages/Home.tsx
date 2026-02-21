@@ -123,8 +123,8 @@ const experiences = [
 const skills = [
   "Product Discovery", "IA Aplicada", "Gestão de Stakeholders", "Métricas", "KPIs",
   "B2B", "B2C", "SaaS", "Enterprise", "User Research", "Priorização", "Roadmapping",
-  "Agile", "Scrum", "Kanban", "OKRs", "Portfolio Management", "SQL", "Power BI",
-  "JIRA", "Confluence", "Miro",
+  "Agile", "Scrum", "Kanban", "OKRs", "Portfolio Management",
+  "SQL", "Power BI", "JIRA", "Confluence", "Miro", "Figma",
 ];
 
 /* ─── Counter component ─── */
@@ -278,20 +278,13 @@ function HeroSection() {
           className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2"
         >
           <div
-            className="w-72 h-80 xl:w-[22rem] xl:h-[26rem] relative overflow-hidden"
+            className="w-72 h-72 xl:w-96 xl:h-96 rounded-full relative overflow-hidden"
             style={{ border: "2px solid #E0E0E0" }}
           >
             <img
               src={PROFILE_PHOTO}
               alt="Verônica Antunes"
               className="w-full h-full object-cover object-top"
-            />
-            {/* Decorative corner accent */}
-            <div
-              className="absolute bottom-0 right-0 w-16 h-16"
-              style={{
-                background: "linear-gradient(135deg, transparent 50%, rgba(255, 87, 34, 0.15) 50%)",
-              }}
             />
           </div>
         </motion.div>
