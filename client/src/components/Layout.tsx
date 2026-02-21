@@ -171,6 +171,16 @@ function Footer() {
                   Case: Laboratório de IA
                 </span>
               </Link>
+              <Link href="/case-portfolio">
+                <span className="text-sm transition-colors duration-300 hover:text-[#FF5722]" style={{ color: "#555555" }}>
+                  Case: Portfolio de Produtos
+                </span>
+              </Link>
+              <Link href="/case-okrs">
+                <span className="text-sm transition-colors duration-300 hover:text-[#FF5722]" style={{ color: "#555555" }}>
+                  Case: OKRs Enterprise
+                </span>
+              </Link>
             </div>
           </div>
 
@@ -193,20 +203,24 @@ function Footer() {
                 <Linkedin size={14} />
                 LinkedIn
               </a>
-              <span className="text-sm flex items-center gap-2" style={{ color: "#999999" }}>
+              <a
+                href="mailto:vfarosas@gmail.com"
+                className="text-sm flex items-center gap-2 transition-colors duration-300 hover:text-[#FF5722]"
+                style={{ color: "#555555" }}
+              >
                 <Mail size={14} />
-                E-mail a definir
-              </span>
+                vfarosas@gmail.com
+              </a>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-[#E0E0E0] flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs" style={{ color: "#999999" }}>
-            &copy; 2025 Verônica Antunes. Todos os direitos reservados.
+            &copy; 2026 Verônica Antunes. Todos os direitos reservados.
           </p>
-          <p className="text-xs" style={{ color: "#CCCCCC" }}>
-            Precisão &bull; Pragmatismo &bull; Empatia &bull; Iniciativa
+          <p className="text-xs font-serif italic" style={{ color: "#BBBBBB" }}>
+            Onde estratégia encontra execução.
           </p>
         </div>
       </div>

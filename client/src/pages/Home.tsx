@@ -9,10 +9,13 @@ import SectionReveal, { StaggerItem } from "@/components/SectionReveal";
 import { useScrollReveal, useCountUp } from "@/hooks/useScrollReveal";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useRef } from "react";
 import {
   ArrowRight,
   Linkedin,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Briefcase,
   TrendingUp,
   Target,
@@ -26,6 +29,8 @@ const CASE_IA_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv
 const CASE_PORTFOLIO_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-5_1771685382000_na1fn_Y2FzZS1wb3J0Zm9saW8tcGxhY2Vob2xkZXI.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTVfMTc3MTY4NTM4MjAwMF9uYTFmbl9ZMkZ6WlMxd2IzSjBabTlzYVc4dGNHeGhZMlZvYjJ4a1pYSS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ddQOM3YkZOCP1O~2D1Ah63-gVYfQ9OFbqChcNVSjTVGwFIIkDQ~7V-6ey1BPOPTJ03aGtrztfsEjcibxhuwyqd55RXbHo77Ms-McoTWCRUJJ8uvkCmNhOY2ToOsLiazpTyAM4Kv~yfRORUt~sZKNEhDVLPT1yYU7DEYtaH-j5oxtu0nkkE7WqP0hdWIJI~G81-YKJQv0p8gkslz~nb7b5ghx~qlST72UhISEe5HS7rWt5CZ-8kXEEBDsrjVqF~QLCRyJFYYn3VdKStgVdNItUW-5Ab4lfj0u6qVVHt1DU1-MHf~mxEQgih2tmr3hP4xR6gPyihiVEnUDzPwPqsR58w__";
 
 const ABSTRACT_1 = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-3_1771685367000_na1fn_YWJzdHJhY3QtcGF0dGVybi0x.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTNfMTc3MTY4NTM2NzAwMF9uYTFmbl9ZV0p6ZEhKaFkzUXRjR0YwZEdWeWJpMHgucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=uMOe63-uKhhH87WYCi71ExnhvfbDadWNsQywB1vjjEOYRz8a6oAENRx30hmcRbI1yCTpnQ~Y7ZvcKZOqngNBOBNtvi4uSMV~iHpYv4VAMaoEZTvbIe~oQ8oqZzCwsmf1pU8glkyDJkPUU5-hAMVEGwLQUvy2QQFzzVO2hpBT6IRTO3vlZAkrJ6QiwOl8LnTjaWWkEX~Obnz3Lz7sw3LNl4waGi~SXUajLG2kXPiXFGnLMu69SO3CiJ3feg3doq2sDK3MN7EZhss65Vco1fi62Ziky0b7wW1TMVj66U5MTm04k2kQMHCS1w0MzIC12SZU1V-2mNuGkPh3qaOh6nplOA__";
+
+const PROFILE_PHOTO = "https://res.cloudinary.com/dnbgmiii1/image/upload/v1771687632/1770914698984_y1pqib.jpg";
 
 /* ─── Impact data ─── */
 const impactItems = [
@@ -119,9 +124,9 @@ const experiences = [
 
 /* ─── Skills ─── */
 const skills = [
-  "Product Discovery", "IA Aplicada", "Gestão de Stakeholders", "Métricas e KPIs",
-  "B2B/SaaS", "Enterprise", "User Research", "Priorização", "Roadmapping",
-  "Agile/Scrum", "OKRs", "Portfolio Management", "SQL", "Power BI",
+  "Product Discovery", "IA Aplicada", "Gestão de Stakeholders", "Métricas", "KPIs",
+  "B2B", "B2C", "SaaS", "Enterprise", "User Research", "Priorização", "Roadmapping",
+  "Agile", "Scrum", "Kanban", "OKRs", "Portfolio Management", "SQL", "Power BI",
   "JIRA", "Confluence", "Miro",
 ];
 
@@ -206,16 +211,25 @@ function HeroSection() {
             Conecto estratégia e execução para acelerar valor de produto
           </motion.p>
 
-          {/* Subtitle */}
-          <motion.p
+          {/* Subtitle - improved distribution */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-sm md:text-base leading-relaxed mb-10 max-w-2xl"
-            style={{ color: "#666666" }}
+            className="flex flex-wrap gap-x-6 gap-y-1 mb-10 max-w-2xl"
           >
-            +10 anos construindo resultados em gestão de produto e portfólio &bull; +5 fluxos de valor &bull; +100 OKRs desdobrados &bull; +3 produtos de IA
-          </motion.p>
+            {[
+              "+10 anos em gestão de produto e portfólio",
+              "+5 fluxos de valor",
+              "+100 OKRs desdobrados",
+              "+3 produtos de IA",
+            ].map((item, i) => (
+              <span key={i} className="text-[15px] leading-relaxed whitespace-nowrap" style={{ color: "#666666" }}>
+                {i > 0 && <span className="mr-6" style={{ color: "#E0E0E0" }}>&bull;</span>}
+                {item}
+              </span>
+            ))}
+          </motion.div>
 
           {/* CTAs */}
           <motion.div
@@ -252,7 +266,7 @@ function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Photo placeholder */}
+        {/* Profile photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -264,7 +278,7 @@ function HeroSection() {
             style={{ border: "2px solid #E0E0E0" }}
           >
             <img
-              src="https://res.cloudinary.com/dnbgmiii1/image/upload/v1771687632/1770914698984_y1pqib.jpg"
+              src={PROFILE_PHOTO}
               alt="Verônica Antunes"
               className="w-full h-full object-cover"
             />
@@ -306,7 +320,7 @@ function AboutSection() {
             className="font-serif mb-12 md:mb-16"
             style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
-            Estratégia, Discovery e Execução<span style={{ color: "#FF5722" }}>.</span>
+            Como gero impacto<span style={{ color: "#FF5722" }}>.</span>
           </h2>
         </SectionReveal>
 
@@ -314,14 +328,16 @@ function AboutSection() {
           {/* Text column */}
           <div className="lg:col-span-3">
             <SectionReveal delay={0.1}>
-              <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: "#555555" }}>
-                Meu trabalho segue uma lógica clara:{" "}
+              <p className="text-base md:text-[17px] leading-relaxed mb-6" style={{ color: "#555555" }}>
+                Meu trabalho segue uma lógica clara:
+              </p>
+              <p className="text-base md:text-[17px] leading-relaxed mb-10" style={{ color: "#555555" }}>
                 <strong style={{ color: "#333333", fontWeight: 700 }}>
                   Estratégia &rarr; Discovery &rarr; Execução orientada a métricas.
-                </strong>
-              </p>
-              <p className="text-base md:text-lg leading-relaxed mb-10" style={{ color: "#666666" }}>
-                Atuo onde estratégia de produto, dados e agilidade se cruzam para gerar roadmaps que entregam valor mensurável.
+                </strong>{" "}
+                <span style={{ color: "#666666" }}>
+                  Atuo onde estratégia de produto, dados e agilidade se cruzam para gerar roadmaps que entregam valor mensurável.
+                </span>
               </p>
             </SectionReveal>
 
@@ -335,7 +351,7 @@ function AboutSection() {
                       <span className="font-serif text-2xl md:text-3xl block mb-1" style={{ color: "#FF5722", fontWeight: 900 }}>
                         {item.metric}
                       </span>
-                      <p className="text-sm leading-relaxed" style={{ color: "#666666" }}>
+                      <p className="text-[15px] leading-relaxed" style={{ color: "#666666" }}>
                         {item.text}
                       </p>
                     </div>
@@ -361,7 +377,7 @@ function AboutSection() {
                     "JIRA, Confluence, Miro, SQL, Power BI e ferramentas de ML para prototipagem e análise",
                     "Atuação consistente em estratégia de produto, alinhamento entre negócio e tecnologia e coordenação de value streams",
                   ].map((item, i) => (
-                    <li key={i} className="text-sm leading-relaxed pl-4 border-l" style={{ color: "#666666", borderColor: "#E0E0E0" }}>
+                    <li key={i} className="text-[15px] leading-relaxed pl-4 border-l" style={{ color: "#666666", borderColor: "#E0E0E0" }}>
                       {item}
                     </li>
                   ))}
@@ -371,7 +387,7 @@ function AboutSection() {
                   <p className="text-xs uppercase tracking-[0.15em] font-sans font-normal mb-3" style={{ color: "#999999" }}>
                     Idiomas
                   </p>
-                  <p className="text-sm" style={{ color: "#555555" }}>
+                  <p className="text-[15px]" style={{ color: "#555555" }}>
                     Português (nativo) &bull; Inglês (avançado)
                   </p>
                 </div>
@@ -401,71 +417,98 @@ function AboutSection() {
   );
 }
 
-/* ─── EXPERIENCE ─── */
+/* ─── EXPERIENCE (horizontal scroll) ─── */
 function ExperienceSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = 380;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="py-20 md:py-32 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
       <div className="container">
         <SectionReveal>
-          <p
-            className="text-xs uppercase tracking-[0.2em] font-sans font-normal mb-3"
-            style={{ color: "#FF5722" }}
-          >
-            Experiência
-          </p>
-          <h2
-            className="font-serif mb-12 md:mb-16"
-            style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
-          >
-            Trajetória<span style={{ color: "#FF5722" }}>.</span>
-          </h2>
+          <div className="flex items-end justify-between mb-12 md:mb-16">
+            <div>
+              <p
+                className="text-xs uppercase tracking-[0.2em] font-sans font-normal mb-3"
+                style={{ color: "#FF5722" }}
+              >
+                Experiência
+              </p>
+              <h2
+                className="font-serif"
+                style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+              >
+                Trajetória<span style={{ color: "#FF5722" }}>.</span>
+              </h2>
+            </div>
+            <div className="hidden md:flex gap-2">
+              <button
+                onClick={() => scroll("left")}
+                className="w-10 h-10 flex items-center justify-center border border-[#E0E0E0] transition-all duration-300 hover:border-[#FF5722] hover:text-[#FF5722]"
+                style={{ color: "#999999" }}
+                aria-label="Anterior"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="w-10 h-10 flex items-center justify-center border border-[#E0E0E0] transition-all duration-300 hover:border-[#FF5722] hover:text-[#FF5722]"
+                style={{ color: "#999999" }}
+                aria-label="Próximo"
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
+          </div>
         </SectionReveal>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div
-            className="hidden md:block absolute left-[180px] lg:left-[220px] top-0 bottom-0 w-px"
-            style={{ backgroundColor: "#E0E0E0" }}
-          />
-
-          <div className="space-y-0">
-            {experiences.map((exp, i) => (
-              <StaggerItem key={i} index={i}>
-                <div className="group grid grid-cols-1 md:grid-cols-[180px_1fr] lg:grid-cols-[220px_1fr] gap-4 md:gap-8 py-8 border-b border-[#E0E0E0] last:border-b-0 transition-colors duration-300 hover:bg-white/60">
-                  {/* Period */}
-                  <div className="md:text-right md:pr-8 relative">
-                    <p className="text-xs font-sans" style={{ color: "#999999" }}>
-                      {exp.period}
-                    </p>
-                    {/* Timeline dot */}
-                    <div
-                      className="hidden md:block absolute right-[-5px] top-1 w-2.5 h-2.5 rounded-full border-2 transition-colors duration-300 group-hover:bg-[#FF5722] group-hover:border-[#FF5722]"
-                      style={{ backgroundColor: "#FFFFFF", borderColor: "#E0E0E0" }}
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="md:pl-8">
-                    <h3 className="font-serif text-lg md:text-xl mb-1" style={{ color: "#333333", fontWeight: 700 }}>
-                      {exp.role}
-                    </h3>
-                    <p className="text-sm mb-4" style={{ color: "#FF5722" }}>
-                      {exp.company}
-                    </p>
-                    <ul className="space-y-2">
-                      {exp.highlights.map((h, j) => (
-                        <li key={j} className="text-sm leading-relaxed pl-4 relative" style={{ color: "#666666" }}>
-                          <span className="absolute left-0 top-2 w-1 h-1 rounded-full" style={{ backgroundColor: "#E0E0E0" }} />
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </div>
+        {/* Horizontal scroll container */}
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          {experiences.map((exp, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-[340px] md:w-[380px] snap-start border border-[#E0E0E0] bg-white p-6 md:p-8 transition-all duration-300 hover:border-[#FF5722]/30 hover:shadow-sm"
+            >
+              <p className="text-xs font-sans mb-2" style={{ color: "#FF5722" }}>
+                {exp.period}
+              </p>
+              <h3 className="font-serif text-lg md:text-xl mb-1" style={{ color: "#333333", fontWeight: 700 }}>
+                {exp.role}
+              </h3>
+              <p className="text-[15px] mb-5" style={{ color: "#999999" }}>
+                {exp.company}
+              </p>
+              <ul className="space-y-2">
+                {exp.highlights.map((h, j) => (
+                  <li key={j} className="text-[15px] leading-relaxed pl-4 relative" style={{ color: "#666666" }}>
+                    <span className="absolute left-0 top-[10px] w-1 h-1 rounded-full" style={{ backgroundColor: "#FF5722" }} />
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
+
+        {/* Mobile scroll hint */}
+        <p className="md:hidden text-xs text-center mt-4" style={{ color: "#CCCCCC" }}>
+          Deslize para ver mais &rarr;
+        </p>
       </div>
     </section>
   );
@@ -516,7 +559,7 @@ function CasesSection() {
                   <h3 className="font-serif text-lg md:text-xl mb-3" style={{ color: "#333333", fontWeight: 700 }}>
                     Avaliação de Impacto de IA em Produção de Conteúdo
                   </h3>
-                  <p className="text-sm leading-relaxed mb-5 flex-1" style={{ color: "#666666" }}>
+                  <p className="text-[15px] leading-relaxed mb-5 flex-1" style={{ color: "#666666" }}>
                     Como medir viabilidade e adoção de IA generativa em produção audiovisual enterprise
                   </p>
                   <div className="flex gap-4 mb-5">
@@ -578,8 +621,8 @@ function CasesSection() {
                   <h3 className="font-serif text-lg mb-2" style={{ color: "#555555", fontWeight: 700 }}>
                     Estruturação de Portfolio de Produtos Digitais
                   </h3>
-                  <p className="text-sm" style={{ color: "#999999" }}>
-                    Em breve
+                  <p className="text-[15px] leading-relaxed" style={{ color: "#999999" }}>
+                    Como estruturei a governança de portfólio para alinhar investimentos a OKRs e aumentar previsibilidade de entrega em ambiente enterprise.
                   </p>
                 </div>
               </div>
@@ -618,8 +661,8 @@ function CasesSection() {
                   <h3 className="font-serif text-lg mb-2" style={{ color: "#555555", fontWeight: 700 }}>
                     OKRs em Ambiente de Alta Complexidade
                   </h3>
-                  <p className="text-sm" style={{ color: "#999999" }}>
-                    Em breve
+                  <p className="text-[15px] leading-relaxed" style={{ color: "#999999" }}>
+                    Como implementei OKRs em múltiplos times simultaneamente, conectando objetivos de negócio a entregas técnicas com rituais de acompanhamento contínuo.
                   </p>
                 </div>
               </div>
@@ -647,7 +690,7 @@ function SkillsSection() {
             className="font-serif mb-12 md:mb-16"
             style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
-            Toolkit<span style={{ color: "#FF5722" }}>.</span>
+            Onde atuo<span style={{ color: "#FF5722" }}>.</span>
           </h2>
         </SectionReveal>
 
@@ -655,7 +698,7 @@ function SkillsSection() {
           {skills.map((skill, i) => (
             <StaggerItem key={skill} index={i}>
               <span
-                className="inline-block text-sm font-sans px-4 py-2 transition-all duration-300 hover:bg-[#FF5722] hover:text-white hover:border-[#FF5722]"
+                className="inline-block text-[15px] font-sans px-4 py-2 transition-all duration-300 hover:bg-[#FF5722] hover:text-white hover:border-[#FF5722]"
                 style={{
                   color: "#555555",
                   border: "1px solid #E0E0E0",
