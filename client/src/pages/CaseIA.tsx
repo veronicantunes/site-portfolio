@@ -258,10 +258,11 @@ export default function CaseIA() {
           {/* Cycle diagram */}
           <SectionReveal delay={0.1}>
             <div className="relative mb-12">
-              {/* Desktop: circle with titles only + descriptions below */}
+              {/* Desktop: circle with cards positioned outside */}
               <div className="hidden md:block">
-                <div className="flex items-center justify-center py-6">
-                  <div className="relative" style={{ width: "500px", height: "500px" }}>
+                <div className="relative mx-auto" style={{ width: "900px", height: "560px" }}>
+                  {/* Circle in center */}
+                  <div className="absolute" style={{ left: "200px", top: "30px", width: "500px", height: "500px" }}>
                     {/* Central label */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
                       <RefreshCw size={28} style={{ color: "#FF5722" }} className="mb-2" />
@@ -271,13 +272,13 @@ export default function CaseIA() {
 
                     {/* Circular track */}
                     <svg className="absolute inset-0" viewBox="0 0 500 500" fill="none">
-                      <circle cx="250" cy="250" r="190" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
-                      <circle cx="250" cy="250" r="190" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
+                      <circle cx="250" cy="250" r="180" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
+                      <circle cx="250" cy="250" r="180" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
                       {/* Arrow arcs */}
-                      <path d="M 340 75 Q 400 120 420 190" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                      <path d="M 425 320 Q 400 390 340 425" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                      <path d="M 160 425 Q 100 390 80 320" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                      <path d="M 80 180 Q 100 110 160 75" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 340 85 Q 395 125 415 190" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 415 320 Q 395 385 340 420" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 160 420 Q 105 385 85 320" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 85 190 Q 105 125 160 85" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
                       <defs>
                         <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
                           <path d="M 0 0 L 8 4 L 0 8 Z" fill="#FF5722" opacity="0.5" />
@@ -285,48 +286,48 @@ export default function CaseIA() {
                       </defs>
                     </svg>
 
-                    {/* Step nodes: icon + title only */}
-                    {sprintSteps.map((step, i) => {
-                      const positions = [
-                        { top: "-10px", left: "50%", transform: "translateX(-50%)" },
-                        { top: "50%", right: "-10px", transform: "translateY(-50%)" },
-                        { bottom: "-10px", left: "50%", transform: "translateX(-50%)" },
-                        { top: "50%", left: "-10px", transform: "translateY(-50%)" },
-                      ];
-                      const pos = positions[i];
-                      return (
-                        <div
-                          key={i}
-                          className="absolute text-center"
-                          style={{ ...pos, width: "140px" } as React.CSSProperties}
-                        >
-                          <div
-                            className="w-12 h-12 mx-auto mb-2 flex items-center justify-center rounded-full bg-white"
-                            style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}
-                          >
-                            <step.icon size={22} style={{ color: "#FF5722" }} />
-                          </div>
-                          <p className="font-serif text-sm" style={{ color: "#333333", fontWeight: 700 }}>
-                            {step.title}
-                          </p>
-                        </div>
-                      );
-                    })}
+                    {/* Small dot nodes on the circle at cardinal points */}
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "70px", left: "50%", transform: "translateX(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", right: "70px", transform: "translateY(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ bottom: "70px", left: "50%", transform: "translateX(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", left: "70px", transform: "translateY(-50%)" }} />
                   </div>
-                </div>
 
-                {/* Descriptions grid below the diagram */}
-                <div className="grid grid-cols-4 gap-6 mt-4">
-                  {sprintSteps.map((step, i) => (
-                    <div key={i} className="text-center">
-                      <p className="font-serif text-sm mb-1" style={{ color: "#FF5722", fontWeight: 700 }}>
-                        {step.title}
-                      </p>
-                      <p className="text-[13px] leading-relaxed" style={{ color: "#666666" }}>
-                        {step.description}
-                      </p>
+                  {/* Top card: Discovery - centered above circle */}
+                  <div className="absolute text-center" style={{ top: "-20px", left: "50%", transform: "translateX(-50%)", width: "220px" }}>
+                    <div className="w-11 h-11 mx-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <Search size={20} style={{ color: "#FF5722" }} />
                     </div>
-                  ))}
+                    <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[0].title}</p>
+                    <p className="text-[12px] leading-relaxed" style={{ color: "#666666" }}>{sprintSteps[0].description}</p>
+                  </div>
+
+                  {/* Right card: Teste Prático - to the right of circle */}
+                  <div className="absolute" style={{ top: "50%", right: "0", transform: "translateY(-50%)", width: "180px" }}>
+                    <div className="w-11 h-11 mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <FlaskConical size={20} style={{ color: "#FF5722" }} />
+                    </div>
+                    <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[1].title}</p>
+                    <p className="text-[12px] leading-relaxed" style={{ color: "#666666" }}>{sprintSteps[1].description}</p>
+                  </div>
+
+                  {/* Bottom card: Entrega - centered below circle */}
+                  <div className="absolute text-center" style={{ bottom: "-20px", left: "50%", transform: "translateX(-50%)", width: "220px" }}>
+                    <p className="text-[12px] leading-relaxed mb-1" style={{ color: "#666666" }}>{sprintSteps[2].description}</p>
+                    <p className="font-serif text-sm mb-2" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[2].title}</p>
+                    <div className="w-11 h-11 mx-auto flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <Package size={20} style={{ color: "#FF5722" }} />
+                    </div>
+                  </div>
+
+                  {/* Left card: Feedback - to the left of circle */}
+                  <div className="absolute text-right" style={{ top: "50%", left: "0", transform: "translateY(-50%)", width: "180px" }}>
+                    <div className="w-11 h-11 ml-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <MessageSquare size={20} style={{ color: "#FF5722" }} />
+                    </div>
+                    <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[3].title}</p>
+                    <p className="text-[12px] leading-relaxed" style={{ color: "#666666" }}>{sprintSteps[3].description}</p>
+                  </div>
                 </div>
               </div>
 
