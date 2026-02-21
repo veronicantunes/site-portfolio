@@ -299,7 +299,7 @@ function HeroSection() {
             className="absolute -bottom-8 -left-12 xl:-bottom-10 xl:-left-16 z-20"
           >
             <div
-              className="w-32 h-32 xl:w-40 xl:h-40 rounded-full relative overflow-hidden"
+              className="w-40 h-40 xl:w-48 xl:h-48 rounded-full relative overflow-hidden"
               style={{ border: "3px solid #FFFFFF", boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}
             >
               <img
@@ -590,7 +590,7 @@ function CasesSection() {
                     {[
                       { num: "35+", label: "ferramentas" },
                       { num: "60+", label: "profissionais" },
-                      { num: "6", label: "meses" },
+                      { num: "7", label: "semanas" },
                     ].map((m, i) => (
                       <div key={i} className="text-center">
                         <span className="font-serif text-xl block" style={{ color: "#FF5722", fontWeight: 900 }}>
