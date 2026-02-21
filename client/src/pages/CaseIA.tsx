@@ -259,8 +259,8 @@ export default function CaseIA() {
           <SectionReveal delay={0.1}>
             <div className="relative mb-12">
               {/* Desktop: circle with cards positioned outside */}
-              <div className="hidden lg:block">
-                <div className="relative mx-auto" style={{ width: "900px", height: "560px", maxWidth: "100%", overflowX: "auto" }}>
+              <div className="hidden md:block">
+                <div className="relative mx-auto" style={{ width: "900px", height: "560px" }}>
                   {/* Circle in center */}
                   <div className="absolute" style={{ left: "200px", top: "30px", width: "500px", height: "500px" }}>
                     {/* Central label */}
@@ -331,8 +331,8 @@ export default function CaseIA() {
                 </div>
               </div>
 
-              {/* Tablet & Mobile: linear flow with arrows */}
-              <div className="lg:hidden space-y-4">
+              {/* Mobile: linear flow with arrows */}
+              <div className="md:hidden space-y-4">
                 {sprintSteps.map((step, i) => (
                   <div key={i}>
                     <div className="flex gap-4 items-start p-4 bg-white border border-[#E0E0E0]">
