@@ -89,7 +89,7 @@ const experiences = [
   },
   {
     role: "UX Writer",
-    company: "Stormgroup (terceirizado)",
+    company: "Globo (via Stormgroup)",
     period: "Mai 2020 - Abr 2021",
     highlights: [
       "Conduzi discovery que identificou problemas estruturais de usabilidade",
@@ -121,10 +121,10 @@ const experiences = [
 
 /* ─── Skills ─── */
 const skills = [
-  "Product Discovery", "IA Aplicada", "Gestão de Stakeholders", "Métricas", "KPIs",
+  "Product Discovery", "IA Aplicada", "Vibe Coding", "Gestão de Stakeholders", "Métricas", "KPIs",
   "B2B", "B2C", "SaaS", "Enterprise", "User Research", "Priorização", "Roadmapping",
   "Agile", "Scrum", "Kanban", "OKRs", "Portfolio Management",
-  "SQL", "Power BI", "JIRA", "Confluence", "Miro", "Figma", "Vibe Coding",
+  "SQL", "Power BI", "JIRA", "Confluence", "Miro", "Figma",
 ];
 
 /* ─── Counter component ─── */
@@ -361,7 +361,7 @@ function AboutSection() {
             Sobre
           </p>
           <h2
-            className="font-serif mb-12 md:mb-16"
+            className="font-serif mb-8 md:mb-10"
             style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
             Como gero impacto<span style={{ color: "#FF5722" }}>.</span>
@@ -588,9 +588,9 @@ function CasesSection() {
                   </p>
                   <div className="flex gap-4 mb-5">
                     {[
-                      { num: "10+", label: "ferramentas" },
-                      { num: "15", label: "profissionais" },
-                      { num: "1", label: "framework" },
+                      { num: "35+", label: "ferramentas" },
+                      { num: "60+", label: "profissionais" },
+                      { num: "6", label: "meses" },
                     ].map((m, i) => (
                       <div key={i} className="text-center">
                         <span className="font-serif text-xl block" style={{ color: "#FF5722", fontWeight: 900 }}>
