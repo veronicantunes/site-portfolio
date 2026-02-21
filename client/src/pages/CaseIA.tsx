@@ -33,9 +33,9 @@ const CASE_IA_HERO = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJ
 const challenges = [
   { icon: BarChart3, title: "Ausência de dados", text: "Nenhuma métrica interna sobre viabilidade de IA em produção audiovisual real" },
   { icon: Users, title: "Resistência cultural", text: "Medo de substituição profissional, apego a processos tradicionais estabelecidos há décadas" },
-  { icon: AlertTriangle, title: "Orçamento zero", text: "Impossibilidade de contratar ferramentas pagas para teste em larga escala" },
+  { icon: AlertTriangle, title: "Orçamento limitado", text: "Orçamento restrito, com a maioria dos testes feitos em versões trial. Contratações pontuais só após validação da ferramenta" },
   { icon: Target, title: "Validação C-level", text: "Necessidade de apresentar dados concretos para stakeholders executivos sem métricas prévias" },
-  { icon: Calendar, title: "Prazo apertado", text: "3 meses para gerar insights acionáveis que fundamentassem decisões de investimento" },
+  { icon: Calendar, title: "Prazo apertado", text: "7 semanas para produzir um curta de 20 a 30 minutos e gerar insights acionáveis que fundamentassem decisões de investimento" },
 ];
 
 const phases = [
@@ -43,10 +43,10 @@ const phases = [
     icon: Search,
     phase: "Fase 1",
     title: "Discovery",
-    duration: "2 semanas",
+    duration: "1 semana",
     items: [
       "Desk research extensivo sobre IA generativa aplicada a audiovisual",
-      "Mapeamento de 50+ ferramentas disponíveis no mercado",
+      "Mapeamento de 35+ ferramentas disponíveis no mercado",
       "Definição de escopo: produção de curta-metragem ficcional como proof of concept",
       "Alinhamento com stakeholders sobre objetivos e limitações do projeto",
     ],
@@ -55,11 +55,11 @@ const phases = [
     icon: FlaskConical,
     phase: "Fase 2",
     title: "Teste Prático",
-    duration: "6 semanas",
+    duration: "4 semanas",
     items: [
-      "Produção completa de curta-metragem usando 10+ ferramentas de IA",
+      "Produção completa de curta-metragem usando 35+ ferramentas de IA",
       "Etapas testadas: roteiro, storyboard, geração de imagem, vídeo, áudio, edição",
-      "Times cross-funcionais envolvidos (roteiro, direção, arte, fotografia, edição)",
+      "60+ profissionais envolvidos de áreas como roteiro, direção, arte, fotografia e edição",
       "Documentação contínua de processo, limitações e aprendizados",
     ],
   },
@@ -67,10 +67,10 @@ const phases = [
     icon: FileText,
     phase: "Fase 3",
     title: "Pesquisa",
-    duration: "2 semanas",
+    duration: "1 semana",
     items: [
       "Desenho e aplicação de questionário estruturado",
-      "15 participantes de 5 áreas diferentes da produção audiovisual",
+      "60+ profissionais de 5 áreas diferentes da produção audiovisual",
       "Análise quantitativa (escalas Likert, métricas de percepção) e qualitativa (feedback aberto)",
       "Triangulação de dados para validação de insights",
     ],
@@ -98,7 +98,7 @@ const deliverables = [
 ];
 
 const results = [
-  { value: 15, suffix: "", label: "profissionais de 5 áreas", sublabel: "Pesquisa validada" },
+  { value: 60, suffix: "+", label: "profissionais de 5 áreas", sublabel: "Pesquisa validada" },
   { value: 73, suffix: "%", label: "perceberam ganho significativo", sublabel: "Percepção de produtividade" },
   { value: 60, suffix: "%", label: "relataram carga cognitiva alta", sublabel: "Esforço mental" },
   { value: 67, suffix: "%", label: "dispostos a integrar IA", sublabel: "Intenção de adoção" },
@@ -206,7 +206,7 @@ export default function CaseIA() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Building2, label: "Empresa", value: "Globo", sub: "Maior grupo de mídia da América Latina" },
-              { icon: Calendar, label: "Período", value: "Abr - Jun 2024", sub: "3 meses" },
+              { icon: Calendar, label: "Período", value: "Abr - Jun 2024", sub: "7 semanas" },
               { icon: UserCircle, label: "Papel", value: "Enterprise Agile Coach", sub: "Liderando projeto de inovação" },
               { icon: Target, label: "Cenário", value: "IA Generativa", sub: "Pressão por modernização dos processos criativos" },
             ].map((item, i) => (
