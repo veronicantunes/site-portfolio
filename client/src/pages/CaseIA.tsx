@@ -36,7 +36,7 @@ const challenges = [
   { icon: BarChart3, title: "Ausência de dados", text: "Nenhuma métrica interna sobre viabilidade de IA em produção audiovisual real" },
   { icon: Users, title: "Resistência cultural", text: "Medo de substituição profissional, apego a processos tradicionais estabelecidos há décadas" },
   { icon: AlertTriangle, title: "Orçamento limitado", text: "Orçamento restrito, com a maioria dos testes feitos em versões trial. Contratações pontuais só após validação da ferramenta" },
-  { icon: Target, title: "Validação C-level", text: "Necessidade de apresentar dados concretos para stakeholders executivos sem métricas prévias" },
+  { icon: Target, title: "Validação C-level", text: "Necessidade de apresentar dados concretos para múltiplos stakeholders executivos sem métricas prévias" },
   { icon: Calendar, title: "Prazo apertado", text: "7 semanas para produzir um curta de 20 a 30 minutos e gerar insights acionáveis que fundamentassem decisões de investimento" },
 ];
 
@@ -48,28 +48,28 @@ const sprintSteps = [
   },
   {
     icon: FlaskConical,
-    title: "Teste / Aplicação",
+    title: "Teste Prático",
     description: "Produção prática usando as ferramentas selecionadas, testando em etapas reais do curta-metragem",
   },
   {
-    icon: MessageSquare,
-    title: "Pesquisa / Feedback",
-    description: "Coleta de percepções dos profissionais envolvidos, análise qualitativa e quantitativa",
+    icon: Package,
+    title: "Entrega",
+    description: "Consolidação dos resultados do ciclo, documentação de processos e aprendizados",
   },
   {
-    icon: Layers,
-    title: "Conclusão",
-    description: "Consolidação de aprendizados, documentação e ajustes para o próximo ciclo",
+    icon: MessageSquare,
+    title: "Feedback",
+    description: "Coleta de percepções dos profissionais envolvidos, análise qualitativa e quantitativa",
   },
 ];
 
 const sprintHighlights = [
-  "7 ciclos semanais de discovery, teste, feedback e conclusão",
-  "35+ ferramentas de IA testadas ao longo dos sprints",
-  "60+ profissionais de 5 áreas envolvidos (roteiro, direção, arte, fotografia, edição)",
+  "7 ciclos semanais de discovery, teste prático, entrega e feedback",
+  "35+ ferramentas de IA testadas ao longo das sprints",
+  "60+ profissionais envolvidos (roteiro, direção, arte, fotografia, edição, VFX, design, sonoplastia, figurino, tecnologia)",
   "Produção de curta-metragem ficcional como proof of concept",
   "Documentação contínua de processo, limitações e aprendizados",
-  "Apresentação executiva com recomendações estratégicas para C-level",
+  "Apresentação executiva com recomendações estratégicas para C-levels",
 ];
 
 const deliverables = [
@@ -251,7 +251,7 @@ export default function CaseIA() {
               Sprints semanais<span style={{ color: "#FF5722" }}>.</span>
             </h2>
             <p className="text-base leading-relaxed mb-10 max-w-3xl" style={{ color: "#666666" }}>
-              Implementamos ciclos semanais inspirados em Scrum, sem nome-lo formalmente. Cada semana seguia o mesmo ritmo: discovery, teste prático, coleta de feedback e conclusão, gerando aprendizado incremental a cada iteração.
+              Implementamos ciclos semanais inspirados no Scrum, sem nomeá-lo formalmente, evitando resistência em equipes de contextos mais tradicionais. Cada semana seguia o mesmo ciclo: discovery, teste prático, entrega e coleta de feedback, gerando aprendizado incremental a cada iteração para todos os envolvidos.
             </p>
           </SectionReveal>
 
@@ -259,27 +259,27 @@ export default function CaseIA() {
           <SectionReveal delay={0.1}>
             <div className="relative mb-12">
               {/* Desktop: circular layout */}
-              <div className="hidden md:flex items-center justify-center py-8">
-                <div className="relative" style={{ width: "480px", height: "480px" }}>
+              <div className="hidden md:flex items-center justify-center py-10">
+                <div className="relative" style={{ width: "640px", height: "640px" }}>
                   {/* Central label */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
-                    <RefreshCw size={24} style={{ color: "#FF5722" }} className="mb-2" />
-                    <span className="font-serif text-2xl block" style={{ color: "#FF5722", fontWeight: 900 }}>7</span>
-                    <span className="text-xs uppercase tracking-[0.15em] font-sans" style={{ color: "#999999" }}>ciclos semanais</span>
+                    <RefreshCw size={32} style={{ color: "#FF5722" }} className="mb-3" />
+                    <span className="font-serif text-4xl block" style={{ color: "#FF5722", fontWeight: 900 }}>7</span>
+                    <span className="text-sm uppercase tracking-[0.15em] font-sans" style={{ color: "#666666" }}>sprints semanais</span>
                   </div>
 
                   {/* Circular track */}
-                  <svg className="absolute inset-0" viewBox="0 0 480 480" fill="none">
-                    <circle cx="240" cy="240" r="180" stroke="#E0E0E0" strokeWidth="1" fill="none" />
-                    <circle cx="240" cy="240" r="180" stroke="#FF5722" strokeWidth="2" fill="none" strokeDasharray="8 12" opacity="0.3" />
-                    {/* Arrow indicators between steps */}
-                    <path d="M 330 80 Q 370 110 380 150" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                    <path d="M 400 300 Q 380 350 340 380" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" />
-                    <path d="M 150 400 Q 110 370 90 330" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" />
-                    <path d="M 80 160 Q 100 110 140 80" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" />
+                  <svg className="absolute inset-0" viewBox="0 0 640 640" fill="none">
+                    <circle cx="320" cy="320" r="240" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
+                    <circle cx="320" cy="320" r="240" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
+                    {/* Arrow arcs between steps */}
+                    <path d="M 430 100 Q 490 150 520 220" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                    <path d="M 530 430 Q 490 500 420 540" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                    <path d="M 210 545 Q 150 500 115 430" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                    <path d="M 110 210 Q 145 145 215 100" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
                     <defs>
-                      <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-                        <path d="M 0 0 L 6 3 L 0 6 Z" fill="#FF5722" opacity="0.4" />
+                      <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                        <path d="M 0 0 L 8 4 L 0 8 Z" fill="#FF5722" opacity="0.5" />
                       </marker>
                     </defs>
                   </svg>
@@ -287,28 +287,28 @@ export default function CaseIA() {
                   {/* Step cards positioned around the circle */}
                   {sprintSteps.map((step, i) => {
                     const positions = [
-                      { top: "0", left: "50%", transform: "translateX(-50%)" },
-                      { top: "50%", right: "0", transform: "translateY(-50%)" },
-                      { bottom: "0", left: "50%", transform: "translateX(-50%)" },
-                      { top: "50%", left: "0", transform: "translateY(-50%)" },
+                      { top: "-20px", left: "50%", transform: "translateX(-50%)" },
+                      { top: "50%", right: "-20px", transform: "translateY(-50%)" },
+                      { bottom: "-20px", left: "50%", transform: "translateX(-50%)" },
+                      { top: "50%", left: "-20px", transform: "translateY(-50%)" },
                     ];
                     const pos = positions[i];
                     return (
                       <div
                         key={i}
-                        className="absolute w-[160px] text-center"
+                        className="absolute w-[200px] text-center"
                         style={pos as React.CSSProperties}
                       >
                         <div
-                          className="w-12 h-12 mx-auto mb-2 flex items-center justify-center rounded-full"
-                          style={{ backgroundColor: "rgba(255,87,34,0.08)", border: "1px solid rgba(255,87,34,0.2)" }}
+                          className="w-14 h-14 mx-auto mb-3 flex items-center justify-center rounded-full"
+                          style={{ backgroundColor: "rgba(255,87,34,0.1)", border: "2px solid rgba(255,87,34,0.25)" }}
                         >
-                          <step.icon size={20} style={{ color: "#FF5722" }} />
+                          <step.icon size={24} style={{ color: "#FF5722" }} />
                         </div>
-                        <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>
+                        <p className="font-serif text-base mb-1" style={{ color: "#333333", fontWeight: 700 }}>
                           {step.title}
                         </p>
-                        <p className="text-[11px] leading-snug" style={{ color: "#999999" }}>
+                        <p className="text-[13px] leading-relaxed" style={{ color: "#666666" }}>
                           {step.description}
                         </p>
                       </div>
@@ -360,7 +360,7 @@ export default function CaseIA() {
           <SectionReveal delay={0.2}>
             <div className="p-6 md:p-8 bg-white border border-[#E0E0E0]">
               <p className="text-xs uppercase tracking-[0.15em] font-sans mb-5" style={{ color: "#FF5722" }}>
-                O que os 7 sprints produziram
+                O que as 7 sprints produziram
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {sprintHighlights.map((item, i) => (
