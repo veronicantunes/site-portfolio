@@ -208,17 +208,32 @@ function HeroSection() {
             Conecto estratégia e execução para acelerar valor de produto
           </motion.p>
 
-          {/* Subtitle */}
+          {/* Stats as mini tags */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-base md:text-lg leading-relaxed mb-10 max-w-2xl"
+            transition={{ duration: 0.7, delay: 0.55 }}
+            className="text-base md:text-lg leading-relaxed mb-5 max-w-2xl"
             style={{ color: "#666666" }}
           >
-            +10 anos construindo resultados em gestão de produto e portfólio<br />
-            +5 fluxos de valor · +100 OKRs desdobrados · +3 produtos de IA
+            +10 anos construindo resultados em gestão de produto e portfólio
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.65 }}
+            className="flex flex-wrap gap-3 mb-10"
+          >
+            {["+5 fluxos de valor", "+100 OKRs desdobrados", "+3 produtos de IA"].map((stat) => (
+              <span
+                key={stat}
+                className="text-xs font-sans px-3 py-1.5 uppercase tracking-[0.05em]"
+                style={{ color: "#FF5722", border: "1px solid #FF5722", backgroundColor: "rgba(255, 87, 34, 0.04)" }}
+              >
+                {stat}
+              </span>
+            ))}
+          </motion.div>
 
           {/* CTAs */}
           <motion.div
@@ -263,13 +278,20 @@ function HeroSection() {
           className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2"
         >
           <div
-            className="w-72 h-72 xl:w-96 xl:h-96 rounded-full relative overflow-hidden"
+            className="w-72 h-80 xl:w-[22rem] xl:h-[26rem] relative overflow-hidden"
             style={{ border: "2px solid #E0E0E0" }}
           >
             <img
               src={PROFILE_PHOTO}
               alt="Verônica Antunes"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
+            />
+            {/* Decorative corner accent */}
+            <div
+              className="absolute bottom-0 right-0 w-16 h-16"
+              style={{
+                background: "linear-gradient(135deg, transparent 50%, rgba(255, 87, 34, 0.15) 50%)",
+              }}
             />
           </div>
         </motion.div>
@@ -432,48 +454,50 @@ function ExperienceSection() {
             scrollbarColor: "#E0E0E0 transparent",
           }}
         >
-          {/* Timeline line */}
-          <div
-            className="hidden md:block absolute left-[180px] lg:left-[220px] top-0 w-px"
-            style={{ backgroundColor: "#E0E0E0", height: "100%" }}
-          />
+          <div className="relative">
+            {/* Timeline line - inside the content div so it stretches with content */}
+            <div
+              className="hidden md:block absolute left-[180px] lg:left-[220px] top-0 bottom-0 w-px"
+              style={{ backgroundColor: "#D0D0D0" }}
+            />
 
-          <div className="space-y-0">
-            {experiences.map((exp, i) => (
-              <StaggerItem key={i} index={i}>
-                <div className="group grid grid-cols-1 md:grid-cols-[180px_1fr] lg:grid-cols-[220px_1fr] gap-4 md:gap-8 py-8 border-b border-[#E0E0E0] last:border-b-0 transition-colors duration-300 hover:bg-white/60">
-                  {/* Period */}
-                  <div className="md:text-right md:pr-8 relative">
-                    <p className="text-xs font-sans font-medium" style={{ color: "#666666" }}>
-                      {exp.period}
-                    </p>
-                    {/* Timeline dot */}
-                    <div
-                      className="hidden md:block absolute right-[-5px] top-1 w-2.5 h-2.5 rounded-full border-2 transition-colors duration-300 group-hover:bg-[#FF5722] group-hover:border-[#FF5722]"
-                      style={{ backgroundColor: "#FFFFFF", borderColor: "#E0E0E0" }}
-                    />
-                  </div>
+            <div className="space-y-0">
+              {experiences.map((exp, i) => (
+                <StaggerItem key={i} index={i}>
+                  <div className="group grid grid-cols-1 md:grid-cols-[180px_1fr] lg:grid-cols-[220px_1fr] gap-4 md:gap-8 py-8 border-b border-[#E0E0E0] last:border-b-0 transition-colors duration-300 hover:bg-white/60">
+                    {/* Period */}
+                    <div className="md:text-right md:pr-8 relative">
+                      <p className="text-xs font-sans font-medium" style={{ color: "#666666" }}>
+                        {exp.period}
+                      </p>
+                      {/* Timeline dot */}
+                      <div
+                        className="hidden md:block absolute right-[-5px] top-1 w-2.5 h-2.5 rounded-full border-2 transition-colors duration-300 group-hover:bg-[#FF5722] group-hover:border-[#FF5722]"
+                        style={{ backgroundColor: "#FFFFFF", borderColor: "#D0D0D0" }}
+                      />
+                    </div>
 
-                  {/* Content */}
-                  <div className="md:pl-8">
-                    <h3 className="font-serif text-lg md:text-xl mb-1" style={{ color: "#333333", fontWeight: 700 }}>
-                      {exp.role}
-                    </h3>
-                    <p className="text-[15px] mb-4" style={{ color: "#FF5722" }}>
-                      {exp.company}
-                    </p>
-                    <ul className="space-y-2">
-                      {exp.highlights.map((h, j) => (
-                        <li key={j} className="text-[15px] leading-relaxed pl-4 relative" style={{ color: "#666666" }}>
-                          <span className="absolute left-0 top-[10px] w-1 h-1 rounded-full" style={{ backgroundColor: "#E0E0E0" }} />
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Content */}
+                    <div className="md:pl-8">
+                      <h3 className="font-serif text-lg md:text-xl mb-1" style={{ color: "#333333", fontWeight: 700 }}>
+                        {exp.role}
+                      </h3>
+                      <p className="text-[15px] mb-4" style={{ color: "#FF5722" }}>
+                        {exp.company}
+                      </p>
+                      <ul className="space-y-2">
+                        {exp.highlights.map((h, j) => (
+                          <li key={j} className="text-[15px] leading-relaxed pl-4 relative" style={{ color: "#666666" }}>
+                            <span className="absolute left-0 top-[10px] w-1 h-1 rounded-full" style={{ backgroundColor: "#E0E0E0" }} />
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </StaggerItem>
-            ))}
+                </StaggerItem>
+              ))}
+            </div>
           </div>
         </div>
       </div>
