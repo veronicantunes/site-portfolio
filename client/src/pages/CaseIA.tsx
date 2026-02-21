@@ -25,6 +25,8 @@ import {
   FlaskConical,
   FileText,
   Layers,
+  RefreshCw,
+  MessageSquare,
 } from "lucide-react";
 
 const CASE_IA_HERO = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-2_1771685385000_na1fn_Y2FzZS1pYS1oZXJv.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTJfMTc3MTY4NTM4NTAwMF9uYTFmbl9ZMkZ6WlMxcFlTMW9aWEp2LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=I~FFvzWdGPdsde-lJwukD2PVXgqSpn8DtWQllfymTUbVWhCWEjhtIj8dkXk4gJFfvAe6Vt1hMvgSanvpNJlPS2uhZSvNBtoDxZn8wxEbr7GBwz91bh1dN5ozG3XCCI99p0b5my9rcwiw1Ch5z3YYcYldR8EiFDaDjPlpuxyOFavT1e~qVfHZmpg5XMQ1VGSt-yoIXwU1Rn8GAUgNFIj7~bAMUpGzhz4GWHYlcTZT~wizTjE4rcUQ3-27lVuC2BQj1Eib4x9a8TCGz8379cc0x~9RWrJwiB2EPEhSmGbieytbzsALTnUe0S516mBh48JThXAeg7ocD1uTOMPad9QjhQ__";
@@ -38,61 +40,42 @@ const challenges = [
   { icon: Calendar, title: "Prazo apertado", text: "7 semanas para produzir um curta de 20 a 30 minutos e gerar insights acionáveis que fundamentassem decisões de investimento" },
 ];
 
-const phases = [
+const sprintSteps = [
   {
     icon: Search,
-    phase: "Fase 1",
     title: "Discovery",
-    duration: "1 semana",
-    items: [
-      "Desk research extensivo sobre IA generativa aplicada a audiovisual",
-      "Mapeamento de 35+ ferramentas disponíveis no mercado",
-      "Definição de escopo: produção de curta-metragem ficcional como proof of concept",
-      "Alinhamento com stakeholders sobre objetivos e limitações do projeto",
-    ],
+    description: "Pesquisa de ferramentas, mapeamento de possibilidades e definição de hipóteses para o ciclo",
   },
   {
     icon: FlaskConical,
-    phase: "Fase 2",
-    title: "Teste Prático",
-    duration: "4 semanas",
-    items: [
-      "Produção completa de curta-metragem usando 35+ ferramentas de IA",
-      "Etapas testadas: roteiro, storyboard, geração de imagem, vídeo, áudio, edição",
-      "60+ profissionais envolvidos de áreas como roteiro, direção, arte, fotografia e edição",
-      "Documentação contínua de processo, limitações e aprendizados",
-    ],
+    title: "Teste / Aplicação",
+    description: "Produção prática usando as ferramentas selecionadas, testando em etapas reais do curta-metragem",
   },
   {
-    icon: FileText,
-    phase: "Fase 3",
-    title: "Pesquisa",
-    duration: "1 semana",
-    items: [
-      "Desenho e aplicação de questionário estruturado",
-      "60+ profissionais de 5 áreas diferentes da produção audiovisual",
-      "Análise quantitativa (escalas Likert, métricas de percepção) e qualitativa (feedback aberto)",
-      "Triangulação de dados para validação de insights",
-    ],
+    icon: MessageSquare,
+    title: "Pesquisa / Feedback",
+    description: "Coleta de percepções dos profissionais envolvidos, análise qualitativa e quantitativa",
   },
   {
     icon: Layers,
-    phase: "Fase 4",
-    title: "Síntese",
-    duration: "1 semana",
-    items: [
-      "Consolidação de aprendizados e métricas",
-      "Criação de apresentação executiva com recomendações estratégicas",
-      "Entrega de framework de avaliação de ferramentas IA para uso futuro",
-      "Documentação completa de processos e lições aprendidas",
-    ],
+    title: "Conclusão",
+    description: "Consolidação de aprendizados, documentação e ajustes para o próximo ciclo",
   },
+];
+
+const sprintHighlights = [
+  "7 ciclos semanais de discovery, teste, feedback e conclusão",
+  "35+ ferramentas de IA testadas ao longo dos sprints",
+  "60+ profissionais de 5 áreas envolvidos (roteiro, direção, arte, fotografia, edição)",
+  "Produção de curta-metragem ficcional como proof of concept",
+  "Documentação contínua de processo, limitações e aprendizados",
+  "Apresentação executiva com recomendações estratégicas para C-level",
 ];
 
 const deliverables = [
   { title: "Framework de avaliação de ferramentas IA", text: "Critérios de qualidade, usabilidade, custo, ética e viabilidade técnica" },
   { title: "Curta-metragem produzido 100% com IA", text: "Proof of concept tangível demonstrando capacidades e limitações" },
-  { title: "Relatório de pesquisa completo", text: "15 participantes, dados quantitativos e qualitativos, insights acionáveis" },
+  { title: "Relatório de pesquisa completo", text: "60+ participantes, dados quantitativos e qualitativos, insights acionáveis" },
   { title: "Apresentação executiva para C-level", text: "Recomendações estratégicas fundamentadas em dados" },
   { title: "Documentação de processos", text: "Guia replicável para futuros projetos de IA na empresa" },
 ];
@@ -254,7 +237,7 @@ export default function CaseIA() {
         </div>
       </section>
 
-      {/* 3. Approach / Timeline */}
+      {/* 3. Approach - Sprint Cycles */}
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="container">
           <SectionReveal>
@@ -264,46 +247,131 @@ export default function CaseIA() {
                 Abordagem
               </p>
             </div>
-            <h2 className="font-serif mb-10" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
-              O processo<span style={{ color: "#FF5722" }}>.</span>
+            <h2 className="font-serif mb-4" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+              Sprints semanais<span style={{ color: "#FF5722" }}>.</span>
             </h2>
+            <p className="text-base leading-relaxed mb-10 max-w-3xl" style={{ color: "#666666" }}>
+              Implementamos ciclos semanais inspirados em Scrum, sem nome-lo formalmente. Cada semana seguia o mesmo ritmo: discovery, teste prático, coleta de feedback e conclusão, gerando aprendizado incremental a cada iteração.
+            </p>
           </SectionReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {phases.map((p, i) => (
-              <StaggerItem key={i} index={i}>
-                <div className="p-6 md:p-8 bg-white border border-[#E0E0E0] h-full transition-all duration-300 hover:border-[#FF5722]/30 hover:shadow-sm">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div
-                      className="w-10 h-10 flex items-center justify-center"
-                      style={{ backgroundColor: "rgba(255,87,34,0.08)" }}
-                    >
-                      <p.icon size={18} style={{ color: "#FF5722" }} />
-                    </div>
-                    <div>
-                      <p className="text-[10px] uppercase tracking-[0.15em] font-sans" style={{ color: "#FF5722" }}>
-                        {p.phase}
-                      </p>
-                      <h3 className="font-serif text-lg" style={{ color: "#333333", fontWeight: 700 }}>
-                        {p.title}
-                      </h3>
-                    </div>
-                    <span className="ml-auto text-xs font-sans px-2 py-1" style={{ backgroundColor: "#F0F0F0", color: "#999999" }}>
-                      {p.duration}
-                    </span>
+          {/* Cycle diagram */}
+          <SectionReveal delay={0.1}>
+            <div className="relative mb-12">
+              {/* Desktop: circular layout */}
+              <div className="hidden md:flex items-center justify-center py-8">
+                <div className="relative" style={{ width: "480px", height: "480px" }}>
+                  {/* Central label */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
+                    <RefreshCw size={24} style={{ color: "#FF5722" }} className="mb-2" />
+                    <span className="font-serif text-2xl block" style={{ color: "#FF5722", fontWeight: 900 }}>7</span>
+                    <span className="text-xs uppercase tracking-[0.15em] font-sans" style={{ color: "#999999" }}>ciclos semanais</span>
                   </div>
-                  <ul className="space-y-2">
-                    {p.items.map((item, j) => (
-                      <li key={j} className="text-sm leading-relaxed pl-4 relative" style={{ color: "#666666" }}>
-                        <span className="absolute left-0 top-2 w-1 h-1 rounded-full" style={{ backgroundColor: "#FF5722" }} />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+
+                  {/* Circular track */}
+                  <svg className="absolute inset-0" viewBox="0 0 480 480" fill="none">
+                    <circle cx="240" cy="240" r="180" stroke="#E0E0E0" strokeWidth="1" fill="none" />
+                    <circle cx="240" cy="240" r="180" stroke="#FF5722" strokeWidth="2" fill="none" strokeDasharray="8 12" opacity="0.3" />
+                    {/* Arrow indicators between steps */}
+                    <path d="M 330 80 Q 370 110 380 150" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                    <path d="M 400 300 Q 380 350 340 380" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" />
+                    <path d="M 150 400 Q 110 370 90 330" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" />
+                    <path d="M 80 160 Q 100 110 140 80" stroke="#FF5722" strokeWidth="1.5" fill="none" opacity="0.4" />
+                    <defs>
+                      <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <path d="M 0 0 L 6 3 L 0 6 Z" fill="#FF5722" opacity="0.4" />
+                      </marker>
+                    </defs>
+                  </svg>
+
+                  {/* Step cards positioned around the circle */}
+                  {sprintSteps.map((step, i) => {
+                    const positions = [
+                      { top: "0", left: "50%", transform: "translateX(-50%)" },
+                      { top: "50%", right: "0", transform: "translateY(-50%)" },
+                      { bottom: "0", left: "50%", transform: "translateX(-50%)" },
+                      { top: "50%", left: "0", transform: "translateY(-50%)" },
+                    ];
+                    const pos = positions[i];
+                    return (
+                      <div
+                        key={i}
+                        className="absolute w-[160px] text-center"
+                        style={pos as React.CSSProperties}
+                      >
+                        <div
+                          className="w-12 h-12 mx-auto mb-2 flex items-center justify-center rounded-full"
+                          style={{ backgroundColor: "rgba(255,87,34,0.08)", border: "1px solid rgba(255,87,34,0.2)" }}
+                        >
+                          <step.icon size={20} style={{ color: "#FF5722" }} />
+                        </div>
+                        <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>
+                          {step.title}
+                        </p>
+                        <p className="text-[11px] leading-snug" style={{ color: "#999999" }}>
+                          {step.description}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
-              </StaggerItem>
-            ))}
-          </div>
+              </div>
+
+              {/* Mobile: linear flow with arrows */}
+              <div className="md:hidden space-y-4">
+                {sprintSteps.map((step, i) => (
+                  <div key={i}>
+                    <div className="flex gap-4 items-start p-4 bg-white border border-[#E0E0E0]">
+                      <div
+                        className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full"
+                        style={{ backgroundColor: "rgba(255,87,34,0.08)" }}
+                      >
+                        <step.icon size={18} style={{ color: "#FF5722" }} />
+                      </div>
+                      <div>
+                        <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>
+                          {step.title}
+                        </p>
+                        <p className="text-xs leading-relaxed" style={{ color: "#666666" }}>
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                    {i < sprintSteps.length - 1 && (
+                      <div className="flex justify-center py-1">
+                        <ChevronRight size={16} style={{ color: "#FF5722", transform: "rotate(90deg)" }} />
+                      </div>
+                    )}
+                    {i === sprintSteps.length - 1 && (
+                      <div className="flex justify-center py-2">
+                        <div className="flex items-center gap-2">
+                          <RefreshCw size={14} style={{ color: "#FF5722" }} />
+                          <span className="text-xs font-sans" style={{ color: "#FF5722" }}>Repeat × 7</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SectionReveal>
+
+          {/* Sprint highlights */}
+          <SectionReveal delay={0.2}>
+            <div className="p-6 md:p-8 bg-white border border-[#E0E0E0]">
+              <p className="text-xs uppercase tracking-[0.15em] font-sans mb-5" style={{ color: "#FF5722" }}>
+                O que os 7 sprints produziram
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {sprintHighlights.map((item, i) => (
+                  <div key={i} className="flex gap-3 items-start">
+                    <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: "#FF5722" }} />
+                    <p className="text-sm leading-relaxed" style={{ color: "#666666" }}>{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SectionReveal>
         </div>
       </section>
 
