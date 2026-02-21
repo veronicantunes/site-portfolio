@@ -58,7 +58,7 @@ const experiences = [
   {
     role: "Enterprise Agile Coach",
     company: "Globo",
-    period: "Mai 2024 - Presente",
+    period: "Mai 2024 - Ago 2025",
     highlights: [
       "Liderei gestão estratégica de portfólio que aumentou aderência aos OKRs em 35%",
       "Viabilizei decisão de investimento em projeto de IA com redução de custos operacionais projetada em ~60%",
@@ -213,7 +213,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-[15px] leading-relaxed mb-10 max-w-2xl"
+            className="text-base md:text-lg leading-relaxed mb-10 max-w-2xl"
             style={{ color: "#666666" }}
           >
             +10 anos construindo resultados em gestão de produto e portfólio<br />
@@ -263,7 +263,7 @@ function HeroSection() {
           className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2"
         >
           <div
-            className="w-56 h-56 xl:w-72 xl:h-72 rounded-full relative overflow-hidden"
+            className="w-72 h-72 xl:w-96 xl:h-96 rounded-full relative overflow-hidden"
             style={{ border: "2px solid #E0E0E0" }}
           >
             <img
@@ -426,7 +426,7 @@ function ExperienceSection() {
 
         {/* Scrollable vertical timeline */}
         <div
-          className="relative max-h-[600px] overflow-y-auto pr-2"
+          className="relative max-h-[600px] overflow-y-auto pr-2 pb-4"
           style={{
             scrollbarWidth: "thin",
             scrollbarColor: "#E0E0E0 transparent",
@@ -434,8 +434,8 @@ function ExperienceSection() {
         >
           {/* Timeline line */}
           <div
-            className="hidden md:block absolute left-[180px] lg:left-[220px] top-0 bottom-0 w-px"
-            style={{ backgroundColor: "#E0E0E0" }}
+            className="hidden md:block absolute left-[180px] lg:left-[220px] top-0 w-px"
+            style={{ backgroundColor: "#E0E0E0", height: "100%" }}
           />
 
           <div className="space-y-0">
@@ -444,7 +444,7 @@ function ExperienceSection() {
                 <div className="group grid grid-cols-1 md:grid-cols-[180px_1fr] lg:grid-cols-[220px_1fr] gap-4 md:gap-8 py-8 border-b border-[#E0E0E0] last:border-b-0 transition-colors duration-300 hover:bg-white/60">
                   {/* Period */}
                   <div className="md:text-right md:pr-8 relative">
-                    <p className="text-xs font-sans" style={{ color: "#999999" }}>
+                    <p className="text-xs font-sans font-medium" style={{ color: "#666666" }}>
                       {exp.period}
                     </p>
                     {/* Timeline dot */}
