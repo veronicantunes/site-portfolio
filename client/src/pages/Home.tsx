@@ -124,7 +124,7 @@ const skills = [
   "Product Discovery", "IA Aplicada", "Gestão de Stakeholders", "Métricas", "KPIs",
   "B2B", "B2C", "SaaS", "Enterprise", "User Research", "Priorização", "Roadmapping",
   "Agile", "Scrum", "Kanban", "OKRs", "Portfolio Management",
-  "SQL", "Power BI", "JIRA", "Confluence", "Miro", "Figma",
+  "SQL", "Power BI", "JIRA", "Confluence", "Miro", "Figma", "Vibe Coding",
 ];
 
 /* ─── Counter component ─── */
@@ -270,24 +270,64 @@ function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Profile photo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2"
-        >
-          <div
-            className="w-72 h-72 xl:w-96 xl:h-96 rounded-full relative overflow-hidden"
-            style={{ border: "2px solid #E0E0E0" }}
+        {/* Profile photos - dual composition */}
+        <div className="hidden lg:block absolute right-8 xl:right-12 top-1/2 -translate-y-1/2">
+          {/* Main photo - larger circle */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="relative z-10"
           >
-            <img
-              src={PROFILE_PHOTO}
-              alt="Verônica Antunes"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-        </motion.div>
+            <div
+              className="w-64 h-64 xl:w-80 xl:h-80 rounded-full relative overflow-hidden"
+              style={{ border: "2px solid #E0E0E0" }}
+            >
+              <img
+                src={PROFILE_PHOTO}
+                alt="Verônica Antunes"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+          </motion.div>
+
+          {/* Secondary photo - smaller circle, offset */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="absolute -bottom-8 -left-12 xl:-bottom-10 xl:-left-16 z-20"
+          >
+            <div
+              className="w-32 h-32 xl:w-40 xl:h-40 rounded-full relative overflow-hidden"
+              style={{ border: "3px solid #FFFFFF", boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}
+            >
+              <img
+                src={PROFILE_PHOTO}
+                alt="Verônica Antunes"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          </motion.div>
+
+          {/* Decorative accent circle */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.2 }}
+            className="absolute -top-4 -right-4 xl:-top-6 xl:-right-6 w-20 h-20 xl:w-24 xl:h-24 rounded-full z-0"
+            style={{ border: "2px solid rgba(255, 87, 34, 0.2)" }}
+          />
+
+          {/* Small decorative dot */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.3 }}
+            className="absolute bottom-4 right-8 w-3 h-3 rounded-full z-0"
+            style={{ backgroundColor: "#FF5722" }}
+          />
+        </div>
       </div>
 
       {/* Scroll indicator */}
@@ -379,7 +419,7 @@ function AboutSection() {
                     "JIRA, Confluence, Miro, SQL, Power BI e ferramentas de ML para prototipagem e análise",
                     "Atuação consistente em estratégia de produto, alinhamento entre negócio e tecnologia e coordenação de value streams",
                   ].map((item, i) => (
-                    <li key={i} className="text-[15px] leading-relaxed pl-4 border-l" style={{ color: "#666666", borderColor: "#E0E0E0" }}>
+                    <li key={i} className="text-[15px] md:text-base leading-relaxed pl-4 border-l" style={{ color: "#666666", borderColor: "#E0E0E0" }}>
                       {item}
                     </li>
                   ))}
@@ -389,7 +429,7 @@ function AboutSection() {
                   <p className="text-xs uppercase tracking-[0.15em] font-sans font-normal mb-3" style={{ color: "#999999" }}>
                     Idiomas
                   </p>
-                  <p className="text-[15px]" style={{ color: "#555555" }}>
+                  <p className="text-[15px] md:text-base" style={{ color: "#555555" }}>
                     Português (nativo) &bull; Inglês (avançado)
                   </p>
                 </div>
@@ -402,7 +442,7 @@ function AboutSection() {
                     {["Precisão", "Pragmatismo", "Empatia", "Iniciativa"].map((word) => (
                       <span
                         key={word}
-                        className="text-xs px-3 py-1 font-sans"
+                        className="text-xs md:text-[13px] px-3 py-1 font-sans"
                         style={{ color: "#FF5722", border: "1px solid #FF5722", backgroundColor: "rgba(255, 87, 34, 0.05)" }}
                       >
                         {word}
