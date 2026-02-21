@@ -17,7 +17,6 @@ import {
   TrendingUp,
   Target,
   BarChart3,
-  User,
 } from "lucide-react";
 
 const HERO_BG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-1_1771685387000_na1fn_aGVyby1nZW9tZXRyaWMtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTFfMTc3MTY4NTM4NzAwMF9uYTFmbl9hR1Z5YnkxblpXOXRaWFJ5YVdNdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ru0aOP4C0U1uu70FfRul4EaPVJk3U~HG2PkGLwWaxSZUcEyTtk~tbXx1akbrST8mhOwOR9Z1i7at2v~nEum5N5j6YgEljkCzW4oHHVWdhFsyLIUOegcxGgZTIMDKe4zrMe1vGYf1YRfA5fiEenfYZJ~H6knyj1rBtUfZf31Bk~DOIXHDieYTYTRFm2GJVY8k2-NWefNiok2Jt2K5be-RU8nXKFNx8wr4-UGl~D0XtpbkXlPmRqBoFurEZVjC4ZOh-J30j24Js7AGME84hlBxLhlJ4g9sksk5zcaUNGsL5V2eN16WViUBFwwVsW0BXhvCez2wURObTsfvtsQ5prvyjQ__";
@@ -263,16 +262,14 @@ function HeroSection() {
           className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2"
         >
           <div
-            className="w-56 h-56 xl:w-72 xl:h-72 rounded-full flex items-center justify-center relative overflow-hidden"
-            style={{ backgroundColor: "#F0F0F0", border: "2px solid #E0E0E0" }}
+            className="w-56 h-56 xl:w-72 xl:h-72 rounded-full relative overflow-hidden"
+            style={{ border: "2px solid #E0E0E0" }}
           >
-            <User size={48} style={{ color: "#CCCCCC" }} />
-            <span
-              className="absolute bottom-4 text-[10px] uppercase tracking-[0.1em] font-sans"
-              style={{ color: "#999999" }}
-            >
-              Adicionar foto
-            </span>
+            <img
+              src="https://res.cloudinary.com/dnbgmiii1/image/upload/v1771687632/1770914698984_y1pqib.jpg"
+              alt="Verônica Antunes"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
       </div>
