@@ -66,7 +66,7 @@ const sprintSteps = [
 const sprintHighlights = [
   "7 ciclos semanais de discovery, teste prático, entrega e feedback",
   "35+ ferramentas de IA testadas ao longo das sprints",
-  "60+ profissionais envolvidos (roteiro, direção, arte, fotografia, edição, VFX, design, sonoplastia, figurino, tecnologia)",
+  "60+ profissionais envolvidos (roteiro, direção, arte, fotografia, edição, VFX, design, sonoplastia, figurino, tecnologia, entre outros)",
   "Produção de curta-metragem ficcional como proof of concept",
   "Documentação contínua de processo, limitações e aprendizados",
   "Apresentação executiva com recomendações estratégicas para C-levels",
@@ -75,13 +75,13 @@ const sprintHighlights = [
 const deliverables = [
   { title: "Framework de avaliação de ferramentas IA", text: "Critérios de qualidade, usabilidade, custo, ética e viabilidade técnica" },
   { title: "Curta-metragem produzido 100% com IA", text: "Proof of concept tangível demonstrando capacidades e limitações" },
-  { title: "Relatório de pesquisa completo", text: "60+ participantes, dados quantitativos e qualitativos, insights acionáveis" },
-  { title: "Apresentação executiva para C-level", text: "Recomendações estratégicas fundamentadas em dados" },
+  { title: "Relatório de pesquisa completo", text: "~20 respondentes de diversas áreas, dados quantitativos e qualitativos, insights acionáveis" },
+  { title: "Apresentação executiva para C-levels", text: "Recomendações estratégicas fundamentadas em dados" },
   { title: "Documentação de processos", text: "Guia replicável para futuros projetos de IA na empresa" },
 ];
 
 const results = [
-  { value: 60, suffix: "+", label: "profissionais de 5 áreas", sublabel: "Pesquisa validada" },
+  { value: 20, suffix: "", label: "respondentes de diversas áreas", sublabel: "Pesquisa validada" },
   { value: 73, suffix: "%", label: "perceberam ganho significativo", sublabel: "Percepção de produtividade" },
   { value: 60, suffix: "%", label: "relataram carga cognitiva alta", sublabel: "Esforço mental" },
   { value: 67, suffix: "%", label: "dispostos a integrar IA", sublabel: "Intenção de adoção" },
@@ -258,62 +258,75 @@ export default function CaseIA() {
           {/* Cycle diagram */}
           <SectionReveal delay={0.1}>
             <div className="relative mb-12">
-              {/* Desktop: circular layout */}
-              <div className="hidden md:flex items-center justify-center py-10">
-                <div className="relative" style={{ width: "640px", height: "640px" }}>
-                  {/* Central label */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
-                    <RefreshCw size={32} style={{ color: "#FF5722" }} className="mb-3" />
-                    <span className="font-serif text-4xl block" style={{ color: "#FF5722", fontWeight: 900 }}>7</span>
-                    <span className="text-sm uppercase tracking-[0.15em] font-sans" style={{ color: "#666666" }}>sprints semanais</span>
-                  </div>
+              {/* Desktop: circle with titles only + descriptions below */}
+              <div className="hidden md:block">
+                <div className="flex items-center justify-center py-6">
+                  <div className="relative" style={{ width: "500px", height: "500px" }}>
+                    {/* Central label */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
+                      <RefreshCw size={28} style={{ color: "#FF5722" }} className="mb-2" />
+                      <span className="font-serif text-3xl block" style={{ color: "#FF5722", fontWeight: 900 }}>7</span>
+                      <span className="text-xs uppercase tracking-[0.15em] font-sans" style={{ color: "#666666" }}>sprints semanais</span>
+                    </div>
 
-                  {/* Circular track */}
-                  <svg className="absolute inset-0" viewBox="0 0 640 640" fill="none">
-                    <circle cx="320" cy="320" r="240" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
-                    <circle cx="320" cy="320" r="240" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
-                    {/* Arrow arcs between steps */}
-                    <path d="M 430 100 Q 490 150 520 220" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                    <path d="M 530 430 Q 490 500 420 540" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                    <path d="M 210 545 Q 150 500 115 430" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                    <path d="M 110 210 Q 145 145 215 100" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                    <defs>
-                      <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                        <path d="M 0 0 L 8 4 L 0 8 Z" fill="#FF5722" opacity="0.5" />
-                      </marker>
-                    </defs>
-                  </svg>
+                    {/* Circular track */}
+                    <svg className="absolute inset-0" viewBox="0 0 500 500" fill="none">
+                      <circle cx="250" cy="250" r="190" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
+                      <circle cx="250" cy="250" r="190" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
+                      {/* Arrow arcs */}
+                      <path d="M 340 75 Q 400 120 420 190" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 425 320 Q 400 390 340 425" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 160 425 Q 100 390 80 320" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 80 180 Q 100 110 160 75" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <defs>
+                        <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                          <path d="M 0 0 L 8 4 L 0 8 Z" fill="#FF5722" opacity="0.5" />
+                        </marker>
+                      </defs>
+                    </svg>
 
-                  {/* Step cards positioned around the circle */}
-                  {sprintSteps.map((step, i) => {
-                    const positions = [
-                      { top: "-20px", left: "50%", transform: "translateX(-50%)" },
-                      { top: "50%", right: "-20px", transform: "translateY(-50%)" },
-                      { bottom: "-20px", left: "50%", transform: "translateX(-50%)" },
-                      { top: "50%", left: "-20px", transform: "translateY(-50%)" },
-                    ];
-                    const pos = positions[i];
-                    return (
-                      <div
-                        key={i}
-                        className="absolute w-[200px] text-center"
-                        style={pos as React.CSSProperties}
-                      >
+                    {/* Step nodes: icon + title only */}
+                    {sprintSteps.map((step, i) => {
+                      const positions = [
+                        { top: "-10px", left: "50%", transform: "translateX(-50%)" },
+                        { top: "50%", right: "-10px", transform: "translateY(-50%)" },
+                        { bottom: "-10px", left: "50%", transform: "translateX(-50%)" },
+                        { top: "50%", left: "-10px", transform: "translateY(-50%)" },
+                      ];
+                      const pos = positions[i];
+                      return (
                         <div
-                          className="w-14 h-14 mx-auto mb-3 flex items-center justify-center rounded-full"
-                          style={{ backgroundColor: "rgba(255,87,34,0.1)", border: "2px solid rgba(255,87,34,0.25)" }}
+                          key={i}
+                          className="absolute text-center"
+                          style={{ ...pos, width: "140px" } as React.CSSProperties}
                         >
-                          <step.icon size={24} style={{ color: "#FF5722" }} />
+                          <div
+                            className="w-12 h-12 mx-auto mb-2 flex items-center justify-center rounded-full bg-white"
+                            style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}
+                          >
+                            <step.icon size={22} style={{ color: "#FF5722" }} />
+                          </div>
+                          <p className="font-serif text-sm" style={{ color: "#333333", fontWeight: 700 }}>
+                            {step.title}
+                          </p>
                         </div>
-                        <p className="font-serif text-base mb-1" style={{ color: "#333333", fontWeight: 700 }}>
-                          {step.title}
-                        </p>
-                        <p className="text-[13px] leading-relaxed" style={{ color: "#666666" }}>
-                          {step.description}
-                        </p>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Descriptions grid below the diagram */}
+                <div className="grid grid-cols-4 gap-6 mt-4">
+                  {sprintSteps.map((step, i) => (
+                    <div key={i} className="text-center">
+                      <p className="font-serif text-sm mb-1" style={{ color: "#FF5722", fontWeight: 700 }}>
+                        {step.title}
+                      </p>
+                      <p className="text-[13px] leading-relaxed" style={{ color: "#666666" }}>
+                        {step.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
