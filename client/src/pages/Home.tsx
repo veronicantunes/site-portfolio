@@ -192,9 +192,7 @@ function HeroSection() {
               letterSpacing: "-0.02em",
             }}
           >
-            Verônica
-            <br />
-            Antunes<span style={{ color: "#FF5722" }}>.</span>
+            Verônica Antunes<span style={{ color: "#FF5722" }}>.</span>
           </motion.h1>
 
           {/* Tagline */}
@@ -308,9 +306,7 @@ function AboutSection() {
             className="font-serif mb-12 md:mb-16"
             style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
-            Estratégia, Discovery
-            <br />
-            e Execução<span style={{ color: "#FF5722" }}>.</span>
+            Estratégia, Discovery e Execução<span style={{ color: "#FF5722" }}>.</span>
           </h2>
         </SectionReveal>
 
@@ -491,9 +487,7 @@ function CasesSection() {
             className="font-serif mb-12 md:mb-16"
             style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
-            Resultados em
-            <br />
-            Destaque<span style={{ color: "#FF5722" }}>.</span>
+            Resultados em Destaque<span style={{ color: "#FF5722" }}>.</span>
           </h2>
         </SectionReveal>
 
