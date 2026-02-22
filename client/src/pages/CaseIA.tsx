@@ -260,9 +260,9 @@ export default function CaseIA() {
             <div className="relative mb-12">
               {/* Desktop: circle with cards positioned outside */}
               <div className="hidden md:block">
-                <div className="relative mx-auto" style={{ width: "1000px", height: "600px", maxWidth: "100%", overflowX: "auto", paddingLeft: "20px", paddingRight: "20px" }}>
+                <div className="relative mx-auto" style={{ width: "1000px", height: "580px", maxWidth: "100%", overflowX: "auto", paddingLeft: "20px", paddingRight: "20px" }}>
                   {/* Circle in center */}
-                  <div className="absolute" style={{ left: "250px", top: "50px", width: "500px", height: "500px" }}>
+                  <div className="absolute" style={{ left: "250px", top: "40px", width: "450px", height: "450px" }}>
                     {/* Central label */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
                       <RefreshCw size={28} style={{ color: "#FF5722" }} className="mb-2" />
@@ -272,13 +272,13 @@ export default function CaseIA() {
 
                     {/* Circular track */}
                     <svg className="absolute inset-0" viewBox="0 0 500 500" fill="none">
-                      <circle cx="250" cy="250" r="180" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
-                      <circle cx="250" cy="250" r="180" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
+                      <circle cx="250" cy="250" r="160" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
+                      <circle cx="250" cy="250" r="160" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
                       {/* Arrow arcs */}
-                      <path d="M 340 85 Q 395 125 415 190" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                      <path d="M 415 320 Q 395 385 340 420" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                      <path d="M 160 420 Q 105 385 85 320" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
-                      <path d="M 85 190 Q 105 125 160 85" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 330 95 Q 385 130 405 185" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 405 315 Q 385 370 330 405" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 170 405 Q 115 370 95 315" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 95 185 Q 115 130 170 95" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
                       <defs>
                         <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
                           <path d="M 0 0 L 8 4 L 0 8 Z" fill="#FF5722" opacity="0.5" />
@@ -287,14 +287,14 @@ export default function CaseIA() {
                     </svg>
 
                     {/* Small dot nodes on the circle at cardinal points */}
-                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "70px", left: "50%", transform: "translateX(-50%)" }} />
-                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", right: "70px", transform: "translateY(-50%)" }} />
-                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ bottom: "70px", left: "50%", transform: "translateX(-50%)" }} />
-                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", left: "70px", transform: "translateY(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "60px", left: "50%", transform: "translateX(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", right: "60px", transform: "translateY(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ bottom: "60px", left: "50%", transform: "translateX(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", left: "60px", transform: "translateY(-50%)" }} />
                   </div>
 
                   {/* Top card: Discovery - centered above circle */}
-                  <div className="absolute text-center" style={{ top: "-40px", left: "50%", transform: "translateX(-50%)", width: "240px" }}>
+                  <div className="absolute text-center" style={{ top: "-20px", left: "50%", transform: "translateX(-50%)", width: "240px" }}>
                     <div className="w-11 h-11 mx-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <Search size={20} style={{ color: "#FF5722" }} />
                     </div>
@@ -303,7 +303,7 @@ export default function CaseIA() {
                   </div>
 
                   {/* Right card: Teste Prático - to the right of circle */}
-                  <div className="absolute" style={{ top: "50%", right: "-40px", transform: "translateY(-50%)", width: "200px" }}>
+                  <div className="absolute" style={{ top: "50%", right: "-20px", transform: "translateY(-50%)", width: "200px" }}>
                     <div className="w-11 h-11 mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <FlaskConical size={20} style={{ color: "#FF5722" }} />
                     </div>
@@ -312,7 +312,7 @@ export default function CaseIA() {
                   </div>
 
                   {/* Bottom card: Entrega - centered below circle */}
-                  <div className="absolute text-center" style={{ bottom: "-40px", left: "50%", transform: "translateX(-50%)", width: "240px" }}>
+                  <div className="absolute text-center" style={{ bottom: "-20px", left: "50%", transform: "translateX(-50%)", width: "240px" }}>
                     <p className="text-[12px] leading-relaxed mb-1" style={{ color: "#666666" }}>{sprintSteps[2].description}</p>
                     <p className="font-serif text-sm mb-2" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[2].title}</p>
                     <div className="w-11 h-11 mx-auto flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
@@ -321,7 +321,7 @@ export default function CaseIA() {
                   </div>
 
                   {/* Left card: Feedback - to the left of circle */}
-                  <div className="absolute text-right" style={{ top: "50%", left: "-40px", transform: "translateY(-50%)", width: "200px" }}>
+                  <div className="absolute text-right" style={{ top: "50%", left: "-20px", transform: "translateY(-50%)", width: "200px" }}>
                     <div className="w-11 h-11 ml-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <MessageSquare size={20} style={{ color: "#FF5722" }} />
                     </div>
