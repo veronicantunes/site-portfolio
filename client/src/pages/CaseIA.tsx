@@ -260,9 +260,9 @@ export default function CaseIA() {
             <div className="relative mb-12">
               {/* Desktop: circle with cards positioned outside */}
               <div className="hidden md:block">
-                <div className="relative mx-auto" style={{ width: "1000px", height: "580px", maxWidth: "100%", overflowX: "auto", paddingLeft: "20px", paddingRight: "20px" }}>
+                <div className="relative mx-auto" style={{ width: "100%", height: "650px", maxWidth: "1200px", margin: "0 auto" }}>
                   {/* Circle in center */}
-                  <div className="absolute" style={{ left: "250px", top: "40px", width: "450px", height: "450px" }}>
+                  <div className="absolute" style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "400px", height: "400px" }}>
                     {/* Central label */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
                       <RefreshCw size={28} style={{ color: "#FF5722" }} className="mb-2" />
@@ -294,26 +294,26 @@ export default function CaseIA() {
                   </div>
 
                   {/* Top card: Discovery - centered above circle */}
-                  <div className="absolute text-center" style={{ top: "-20px", left: "50%", transform: "translateX(-50%)", width: "240px" }}>
+                  <div className="absolute text-center" style={{ top: "0px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
                     <div className="w-11 h-11 mx-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <Search size={20} style={{ color: "#FF5722" }} />
                     </div>
                     <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[0].title}</p>
-                    <p className="text-[12px] leading-relaxed" style={{ color: "#666666" }}>{sprintSteps[0].description}</p>
+                    <p className="text-[12px] leading-tight" style={{ color: "#666666", wordSpacing: "0.05em" }}>Pesquisa de ferramentas, mapeamento de possibilidades e definição de hipóteses para o ciclo</p>
                   </div>
 
                   {/* Right card: Teste Prático - to the right of circle */}
-                  <div className="absolute" style={{ top: "50%", right: "-20px", transform: "translateY(-50%)", width: "200px" }}>
+                  <div className="absolute" style={{ top: "50%", right: "0px", transform: "translateY(-50%)", width: "220px" }}>
                     <div className="w-11 h-11 mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <FlaskConical size={20} style={{ color: "#FF5722" }} />
                     </div>
                     <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[1].title}</p>
-                    <p className="text-[12px] leading-relaxed" style={{ color: "#666666" }}>{sprintSteps[1].description}</p>
+                    <p className="text-[12px] leading-tight" style={{ color: "#666666", wordSpacing: "0.05em" }}>Produção prática usando as ferramentas selecionadas, testando em etapas reais do curta-metragem</p>
                   </div>
 
                   {/* Bottom card: Entrega - centered below circle */}
-                  <div className="absolute text-center" style={{ bottom: "-20px", left: "50%", transform: "translateX(-50%)", width: "240px" }}>
-                    <p className="text-[12px] leading-relaxed mb-1" style={{ color: "#666666" }}>{sprintSteps[2].description}</p>
+                  <div className="absolute text-center" style={{ bottom: "0px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
+                    <p className="text-[12px] leading-tight mb-1" style={{ color: "#666666", wordSpacing: "0.05em" }}>Consolidação dos resultados do ciclo, documentação de processos e aprendizados</p>
                     <p className="font-serif text-sm mb-2" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[2].title}</p>
                     <div className="w-11 h-11 mx-auto flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <Package size={20} style={{ color: "#FF5722" }} />
@@ -321,12 +321,12 @@ export default function CaseIA() {
                   </div>
 
                   {/* Left card: Feedback - to the left of circle */}
-                  <div className="absolute text-right" style={{ top: "50%", left: "-20px", transform: "translateY(-50%)", width: "200px" }}>
+                  <div className="absolute text-right" style={{ top: "50%", left: "0px", transform: "translateY(-50%)", width: "220px" }}>
                     <div className="w-11 h-11 ml-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <MessageSquare size={20} style={{ color: "#FF5722" }} />
                     </div>
                     <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[3].title}</p>
-                    <p className="text-[12px] leading-relaxed" style={{ color: "#666666" }}>{sprintSteps[3].description}</p>
+                    <p className="text-[12px] leading-tight" style={{ color: "#666666", wordSpacing: "0.05em" }}>Coleta de percepções dos profissionais envolvidos, análise qualitativa e quantitativa</p>
                   </div>
                 </div>
               </div>
