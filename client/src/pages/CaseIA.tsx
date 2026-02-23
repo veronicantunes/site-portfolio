@@ -294,7 +294,7 @@ export default function CaseIA() {
                   </div>
 
                   {/* Top card: Discovery - centered above circle */}
-                  <div className="absolute text-center" style={{ top: "0px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
+                  <div className="absolute text-center" style={{ top: "30px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
                     <div className="w-11 h-11 mx-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <Search size={20} style={{ color: "#FF5722" }} />
                     </div>
@@ -303,7 +303,7 @@ export default function CaseIA() {
                   </div>
 
                   {/* Right card: Teste Prático - to the right of circle */}
-                  <div className="absolute" style={{ top: "50%", right: "0px", transform: "translateY(-50%)", width: "220px" }}>
+                  <div className="absolute" style={{ top: "50%", right: "30px", transform: "translateY(-50%)", width: "220px" }}>
                     <div className="w-11 h-11 mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <FlaskConical size={20} style={{ color: "#FF5722" }} />
                     </div>
@@ -312,7 +312,7 @@ export default function CaseIA() {
                   </div>
 
                   {/* Bottom card: Entrega - centered below circle */}
-                  <div className="absolute text-center" style={{ bottom: "0px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
+                  <div className="absolute text-center" style={{ bottom: "30px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
                     <p className="text-[12px] leading-tight mb-1" style={{ color: "#666666", wordSpacing: "0.05em" }}>Consolidação dos resultados do ciclo, documentação de processos e aprendizados</p>
                     <p className="font-serif text-sm mb-2" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[2].title}</p>
                     <div className="w-11 h-11 mx-auto flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
@@ -321,7 +321,7 @@ export default function CaseIA() {
                   </div>
 
                   {/* Left card: Feedback - to the left of circle */}
-                  <div className="absolute text-right" style={{ top: "50%", left: "0px", transform: "translateY(-50%)", width: "220px" }}>
+                  <div className="absolute text-right" style={{ top: "50%", left: "30px", transform: "translateY(-50%)", width: "220px" }}>
                     <div className="w-11 h-11 ml-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
                       <MessageSquare size={20} style={{ color: "#FF5722" }} />
                     </div>
