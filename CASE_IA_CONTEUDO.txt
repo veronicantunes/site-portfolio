@@ -1,0 +1,250 @@
+================================================================================
+PÁGINA INTERNA: LABORATÓRIO DE IA NA GLOBO
+Estrutura e Conteúdo Completo do Case
+================================================================================
+
+BREADCRUMB
+─────────────────────────────────────────────────────────────────────────────
+Home > Laboratório de IA na Globo
+
+
+HERO SECTION
+─────────────────────────────────────────────────────────────────────────────
+Badge: IA Aplicada | Pesquisa | 2024
+
+Título Principal:
+Avaliação de Impacto de IA em Produção de Conteúdo.
+
+Subtítulo:
+Como medir viabilidade, percepção e intenção de adoção de IA generativa em 
+produção audiovisual enterprise
+
+[Imagem Hero - Visualização de inteligência artificial em produção de conteúdo]
+
+
+SEÇÃO 1: CONTEXTO
+─────────────────────────────────────────────────────────────────────────────
+Ícone: Clipboard
+Label: CONTEXTO
+Título: O cenário.
+
+Cards de Contexto (4 colunas):
+
+1. EMPRESA
+   Valor: Globo
+   Descrição: Maior grupo de mídia da América Latina
+
+2. PERÍODO
+   Valor: Abr - Jun 2024
+   Descrição: 7 semanas
+
+3. PAPEL
+   Valor: Enterprise Agile Coach
+   Descrição: Liderando projeto de inovação
+
+4. CENÁRIO
+   Valor: IA Generativa
+   Descrição: Pressão por modernização dos processos criativos
+
+
+SEÇÃO 2: DESAFIOS
+─────────────────────────────────────────────────────────────────────────────
+Ícone: Alert Triangle
+Label: DESAFIOS
+Título: O que enfrentamos.
+
+5 Desafios Principais (com ícones e descrições):
+
+1. AUSÊNCIA DE DADOS
+   Ícone: Bar Chart
+   Descrição: Nenhuma métrica interna sobre viabilidade de IA em produção 
+   audiovisual real
+
+2. RESISTÊNCIA CULTURAL
+   Ícone: Users
+   Descrição: Medo de substituição profissional, apego a processos tradicionais 
+   estabelecidos há décadas
+
+3. ORÇAMENTO LIMITADO
+   Ícone: Alert Triangle
+   Descrição: Orçamento restrito, com a maioria dos testes feitos em versões 
+   trial. Contratações pontuais só após validação da ferramenta
+
+4. VALIDAÇÃO C-LEVEL
+   Ícone: Target
+   Descrição: Necessidade de apresentar dados concretos para múltiplos 
+   stakeholders executivos sem métricas prévias
+
+5. PRAZO APERTADO
+   Ícone: Calendar
+   Descrição: 7 semanas para produzir um curta de 20 a 30 minutos e gerar 
+   insights acionáveis que fundamentassem decisões de investimento
+
+
+SEÇÃO 3: ABORDAGEM - SPRINTS SEMANAIS
+─────────────────────────────────────────────────────────────────────────────
+Ícone: Target
+Label: ABORDAGEM
+Título: Sprints semanais.
+
+Descrição:
+Implementamos ciclos semanais inspirados no Scrum, sem nomeá-lo formalmente, 
+evitando resistência em equipes de contextos mais tradicionais. Cada semana 
+seguia o mesmo ciclo: discovery, teste prático, entrega e coleta de feedback, 
+gerando aprendizado incremental a cada iteração para todos os envolvidos.
+
+DIAGRAMA CIRCULAR (Desktop - 7 Sprints):
+Centro: Ícone de refresh + "7" + "SPRINTS SEMANAIS"
+
+4 Pontos Cardinais com Cards:
+
+TOPO - DISCOVERY
+Ícone: Search
+Descrição: Pesquisa de ferramentas, mapeamento de possibilidades e definição 
+de hipóteses para o ciclo
+
+DIREITA - TESTE PRÁTICO
+Ícone: Flask
+Descrição: Produção prática usando as ferramentas selecionadas, testando em 
+etapas reais do curta-metragem
+
+FUNDO - ENTREGA
+Ícone: Package
+Descrição: Consolidação dos resultados do ciclo, documentação de processos e 
+aprendizados
+
+ESQUERDA - FEEDBACK
+Ícone: Message Square
+Descrição: Coleta de percepções dos profissionais envolvidos, análise 
+qualitativa e quantitativa
+
+HIGHLIGHTS DAS 7 SPRINTS:
+─────────────────────────────────────────────────────────────────────────────
+• 7 ciclos semanais de discovery, teste prático, entrega e feedback
+• 35+ ferramentas de IA testadas ao longo das sprints
+• 60+ profissionais envolvidos (roteiro, direção, arte, fotografia, edição, 
+  VFX, design, sonoplastia, figurino, tecnologia, entre outros)
+• Produção de curta-metragem ficcional como proof of concept
+• Documentação contínua de processo, limitações e aprendizados
+• Apresentação executiva com recomendações estratégicas para C-levels
+
+
+SEÇÃO 4: ENTREGAS PRINCIPAIS
+─────────────────────────────────────────────────────────────────────────────
+Ícone: Package
+Label: ENTREGAS PRINCIPAIS
+Título: O que entregamos.
+
+5 Entregas (com numeração 01-05):
+
+01. FRAMEWORK DE AVALIAÇÃO DE FERRAMENTAS IA
+    Critérios de qualidade, usabilidade, custo, ética e viabilidade técnica
+
+02. CURTA-METRAGEM PRODUZIDO 100% COM IA
+    Proof of concept tangível demonstrando capacidades e limitações
+
+03. RELATÓRIO DE PESQUISA COMPLETO
+    ~20 respondentes de diversas áreas, dados quantitativos e qualitativos, 
+    insights acionáveis
+
+04. APRESENTAÇÃO EXECUTIVA PARA C-LEVELS
+    Recomendações estratégicas fundamentadas em dados
+
+05. DOCUMENTAÇÃO DE PROCESSOS
+    Guia replicável para futuros projetos de IA na empresa
+
+
+SEÇÃO 5: RESULTADOS
+─────────────────────────────────────────────────────────────────────────────
+Ícone: Bar Chart
+Label: RESULTADOS
+Título: Os números.
+
+4 Métricas com Animação de Contagem:
+
+MÉTRICA 1:
+Número: 20
+Sublabel: Pesquisa validada
+Descrição: respondentes de diversas áreas
+
+MÉTRICA 2:
+Número: 73%
+Sublabel: Percepção de produtividade
+Descrição: perceberam ganho significativo
+
+MÉTRICA 3:
+Número: 60%
+Sublabel: Esforço mental
+Descrição: relataram carga cognitiva alta
+
+MÉTRICA 4:
+Número: 67%
+Sublabel: Intenção de adoção
+Descrição: dispostos a integrar IA
+
+IMPACTO ORGANIZACIONAL:
+─────────────────────────────────────────────────────────────────────────────
+Dados gerados fundamentaram decisão de investimento em IA pela diretoria, com 
+projeção de redução de custos operacionais em ~60% e aumento de produtividade 
+em ~40% nos fluxos de produção audiovisual.
+
+
+SEÇÃO 6: APRENDIZADOS
+─────────────────────────────────────────────────────────────────────────────
+Ícone: Lightbulb
+Label: APRENDIZADOS
+Título: O que aprendi.
+
+5 Aprendizados Principais:
+
+1. IA NÃO SUBSTITUI, AMPLIFICA
+   Profissionais veem IA como ferramenta complementar, não ameaça, quando 
+   envolvidos ativamente no processo de teste e validação.
+
+2. CURVA DE APRENDIZADO É SUBESTIMADA
+   Ganho de produtividade existe e é real, mas exige investimento significativo 
+   em tempo de treinamento e adaptação de processos.
+
+3. PESQUISA QUALITATIVA É CRÍTICA
+   Números sozinhos não capturam nuances emocionais (medo, entusiasmo, 
+   ceticismo) que determinam sucesso de adoção.
+
+4. STAKEHOLDER MANAGEMENT É CONTÍNUO
+   Comunicação constante e transparente com stakeholders é essencial para 
+   manter alinhamento e apoio ao longo de projetos de inovação.
+
+5. VIÉS DE NOVIDADE É REAL
+   Entusiasmo inicial com ferramentas pode mascarar limitações de longo prazo, 
+   exigindo validação estendida antes de decisões de investimento.
+
+
+SEÇÃO 7: COMPETÊNCIAS APLICADAS
+─────────────────────────────────────────────────────────────────────────────
+Label: COMPETÊNCIAS APLICADAS
+
+Tags de Habilidades (com hover interativo):
+• Product Discovery
+• User Research
+• Stakeholder Management
+• IA Aplicada
+• Análise Quantitativa
+• Análise Qualitativa
+• Facilitação
+• Gestão de Projetos
+• Apresentação Executiva
+• Frameworks de Avaliação
+• Priorização
+• Roadmapping
+
+
+CALL-TO-ACTION FINAL
+─────────────────────────────────────────────────────────────────────────────
+Botão Primário (Laranja):
+Ver próximo case →
+
+Botão Secundário (Cinza):
+← Voltar para home
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================
