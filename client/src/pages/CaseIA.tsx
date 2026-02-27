@@ -47,11 +47,11 @@ const challenges = [
 ];
 
 const strategicDecisions = [
-  { icon: "🧭", title: "Enquadrar como experimento desde o dia zero", desc: "Decidi posicionar o laboratório como discovery, não como entrega garantida. Stakeholders C-level entraram com mentalidade de aprendizado, o que permitiu invalidar ferramentas sem fricção. A melhor gestão de expectativas é a que previne conflito, não a que resolve.", tag: "Trade-off: abrir mão de 'prometer resultado' para ganhar liberdade de experimentação", tagType: "tradeoff" },
-  { icon: "🔬", title: "Deixar critérios de invalidação emergirem da prática", desc: "Em vez de definir critérios a priori, permiti que as 7 semanas de experimentação revelassem o que tornava uma ferramenta viável ou inviável. Os times, organizados por pipeline de produção, construíram coletivamente três lentes de avaliação: técnica, negócio e operacional.", tag: "Resultado: framework de avaliação reutilizável pelo COE", tagType: "outcome" },
-  { icon: "📡", title: "System demos semanais como mecanismo de transparência radical", desc: "Implementei reviews semanais onde os 6 times apresentavam resultados reais, não slides. Ferramentas eram classificadas ao vivo como 'não válidas para o processo neste momento', com critérios de avaliação compartilhados. Isso eliminava surpresas e mantinha 65 stakeholders alinhados.", tag: "Trade-off: exposição alta (risco de parecer 'pouco progresso') por transparência e confiança", tagType: "tradeoff" },
-  { icon: "⚖️", title: "Priorizar velocidade de descoberta sobre profundidade técnica", desc: "Com 35+ ferramentas e apenas 7 semanas, a decisão foi testar amplitude antes de profundidade. Sprints semanais com ciclo completo garantiam aprendizado incremental. Ferramentas promissoras recebiam mais investimento nos ciclos seguintes, as demais eram descartadas rapidamente.", tag: "Resultado: time-to-learning reduzido, decisões de investimento mais informadas", tagType: "outcome" },
-  { icon: "📊", title: "Pesquisa estruturada como entrega paralela", desc: "Decidi que dados de percepção dos profissionais tinham tanto valor quanto métricas de produção. Conduzi pesquisa com 20 participantes medindo produtividade percebida, carga cognitiva e intenção de adoção. Números sozinhos não capturam nuances emocionais.", tag: "Resultado: dados quali + quanti que fundamentaram decisão de investimento pela diretoria", tagType: "outcome" },
+  { title: "Enquadrar como experimento desde o dia zero", desc: "Decidi posicionar o laboratório como discovery, não como entrega garantida. Stakeholders C-level entraram com mentalidade de aprendizado, o que permitiu invalidar ferramentas sem fricção. A melhor gestão de expectativas é a que previne conflito, não a que resolve.", tag: "Trade-off: abrir mão de 'prometer resultado' para ganhar liberdade de experimentação", tagType: "tradeoff" },
+  { title: "Deixar critérios de invalidação emergirem da prática", desc: "Em vez de definir critérios a priori, permiti que as 7 semanas de experimentação revelassem o que tornava uma ferramenta viável ou inviável. Os times, organizados por pipeline de produção, construíram coletivamente três lentes de avaliação: técnica, negócio e operacional.", tag: "Resultado: framework de avaliação reutilizável pelo COE", tagType: "outcome" },
+  { title: "System demos semanais como mecanismo de transparência radical", desc: "Implementei reviews semanais onde os 6 times apresentavam resultados reais, não slides. Ferramentas eram classificadas ao vivo como 'não válidas para o processo neste momento', com critérios de avaliação compartilhados. Isso eliminava surpresas e mantinha 65 stakeholders alinhados.", tag: "Trade-off: exposição alta (risco de parecer 'pouco progresso') por transparência e confiança", tagType: "tradeoff" },
+  { title: "Priorizar velocidade de descoberta sobre profundidade técnica", desc: "Com 35+ ferramentas e apenas 7 semanas, a decisão foi testar amplitude antes de profundidade. Sprints semanais com ciclo completo garantiam aprendizado incremental. Ferramentas promissoras recebiam mais investimento nos ciclos seguintes, as demais eram descartadas rapidamente.", tag: "Resultado: time-to-learning reduzido, decisões de investimento mais informadas", tagType: "outcome" },
+  { title: "Pesquisa estruturada como entrega paralela", desc: "Decidi que dados de percepção dos profissionais tinham tanto valor quanto métricas de produção. Conduzi pesquisa com 20 participantes medindo produtividade percebida, carga cognitiva e intenção de adoção. Números sozinhos não capturam nuances emocionais.", tag: "Resultado: dados quali + quanti que fundamentaram decisão de investimento pela diretoria", tagType: "outcome" },
 ];
 
 const deliverables = [
@@ -161,9 +161,7 @@ export default function CaseIA() {
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="container">
           <SectionReveal>
-            <p className="text-xs uppercase tracking-[0.2em] font-sans mb-3" style={{ color: "#FF5722" }}>
-              Contexto
-            </p>
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Contexto</span>
             <h2 className="font-serif mb-6" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
               O cenário estratégico<span style={{ color: "#FF5722" }}>.</span>
             </h2>
@@ -211,9 +209,7 @@ export default function CaseIA() {
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]">
         <div className="container">
           <SectionReveal>
-            <p className="text-xs uppercase tracking-[0.2em] font-sans mb-3" style={{ color: "#FF5722" }}>
-              Desafios
-            </p>
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Desafios</span>
             <h2 className="font-serif mb-6" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
               Três tensões simultâneas<span style={{ color: "#FF5722" }}>.</span>
             </h2>
@@ -240,9 +236,7 @@ export default function CaseIA() {
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="container">
           <SectionReveal>
-            <p className="text-xs uppercase tracking-[0.2em] font-sans mb-3" style={{ color: "#FF5722" }}>
-              Decisões Estratégicas
-            </p>
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Decisões Estratégicas</span>
             <h2 className="font-serif mb-6" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
               O que decidi e por quê<span style={{ color: "#FF5722" }}>.</span>
             </h2>
@@ -255,10 +249,7 @@ export default function CaseIA() {
             {strategicDecisions.map((d, i) => (
               <StaggerItem key={i} index={i}>
                 <div className="p-6 md:p-8 bg-white border border-[#E0E0E0] transition-all duration-300 hover:border-[#FF5722]/30">
-                  <div className="flex gap-4 items-start mb-4">
-                    <span className="text-2xl flex-shrink-0">{d.icon}</span>
-                    <h3 className="font-serif text-base" style={{ color: "#333333", fontWeight: 700 }}>{d.title}</h3>
-                  </div>
+                  <h3 className="font-serif text-base mb-4" style={{ color: "#333333", fontWeight: 700 }}>{d.title}</h3>
                   <p className="text-sm leading-relaxed mb-4" style={{ color: "#666666" }}>{d.desc}</p>
                   <div
                     className="inline-block text-xs px-3 py-1.5 rounded-full"
@@ -280,9 +271,7 @@ export default function CaseIA() {
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]">
         <div className="container">
           <SectionReveal>
-            <p className="text-xs uppercase tracking-[0.2em] font-sans mb-3" style={{ color: "#FF5722" }}>
-              Entregas Principais
-            </p>
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Entregas Principais</span>
             <h2 className="font-serif mb-10" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
               O que entregamos<span style={{ color: "#FF5722" }}>.</span>
             </h2>
@@ -306,9 +295,7 @@ export default function CaseIA() {
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="container">
           <SectionReveal>
-            <p className="text-xs uppercase tracking-[0.2em] font-sans mb-3" style={{ color: "#FF5722" }}>
-              Resultados
-            </p>
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Resultados</span>
             <h2 className="font-serif mb-10" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
               Evidências geradas<span style={{ color: "#FF5722" }}>.</span>
             </h2>
@@ -374,11 +361,11 @@ export default function CaseIA() {
 
           {/* Limitation */}
           <SectionReveal delay={0.3}>
-            <div className="mt-6 p-6 md:p-8" style={{ backgroundColor: "rgba(196,133,12,0.08)", border: "1px solid rgba(196,133,12,0.2)", borderRadius: "8px" }}>
-              <p className="flex items-center gap-2 text-sm mb-3" style={{ color: "#C4850C", fontWeight: 700 }}>
-                <AlertTriangle size={16} /> Limitação admitida
+            <div className="p-6 md:p-8 bg-white border border-[#E0E0E0]">
+              <p className="text-sm mb-3" style={{ color: "#333333", fontWeight: 700 }}>
+                Limitação admitida
               </p>
-              <p className="text-sm leading-relaxed" style={{ color: "#6B5A2E" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "#666666" }}>
                 Não havia uma North Star Metric formal unificada. Operei com proxies complementares: lead time (eficiência operacional), percepção dos times (prontidão para adoção) e engajamento de stakeholders. Se refizesse hoje, proporia uma métrica como "percentual de ferramentas validadas prontas para recomendação ao COE".
               </p>
             </div>
@@ -390,9 +377,7 @@ export default function CaseIA() {
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]">
         <div className="container">
           <SectionReveal>
-            <p className="text-xs uppercase tracking-[0.2em] font-sans mb-3" style={{ color: "#FF5722" }}>
-              Aprendizados
-            </p>
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Aprendizados</span>
             <h2 className="font-serif mb-10" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
               O que levo comigo<span style={{ color: "#FF5722" }}>.</span>
             </h2>
@@ -418,9 +403,7 @@ export default function CaseIA() {
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="container">
           <SectionReveal>
-            <p className="text-xs uppercase tracking-[0.2em] font-sans mb-6" style={{ color: "#FF5722" }}>
-              Competências Aplicadas
-            </p>
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Competências Aplicadas</span>
           </SectionReveal>
 
           <div className="flex flex-wrap gap-3">
@@ -441,10 +424,12 @@ export default function CaseIA() {
       {/* Confidentiality */}
       <section className="py-12 border-t border-[#E0E0E0]">
         <div className="container">
-          <div className="p-6 flex gap-3 items-start" style={{ backgroundColor: "#F3F2EE", borderRadius: "8px" }}>
-            <Lock size={16} style={{ color: "#999999", flexShrink: 0, marginTop: "2px" }} />
-            <p className="text-xs leading-relaxed" style={{ color: "#8A8A8A" }}>
-              Este case utiliza exclusivamente informações públicas e resultados agregados. Nomes de ferramentas específicas, métricas financeiras detalhadas e detalhes de implementação foram omitidos por confidencialidade. Referência pública:{" "}
+          <div className="p-6 bg-white border border-[#E0E0E0]">
+            <p className="text-xs leading-relaxed mb-2" style={{ color: "#666666" }}>
+              <strong style={{ color: "#333333" }}>Informação confidencial:</strong> Este case utiliza exclusivamente informações públicas e resultados agregados. Nomes de ferramentas específicas, métricas financeiras detalhadas e detalhes de implementação foram omitidos por confidencialidade.
+            </p>
+            <p className="text-xs" style={{ color: "#666666" }}>
+              Referência pública:{" "}
               <a href="https://www.mobiletime.com.br/noticias/10/12/2024/globo-laboratorio-de-ia/" target="_blank" rel="noreferrer" style={{ color: "#FF5722", textDecoration: "underline" }}>
                 Mobile Time, Dez/2024
               </a>
