@@ -20,19 +20,31 @@ import {
 } from "lucide-react";
 
 
+
+
 const HERO_BG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-1_1771685387000_na1fn_aGVyby1nZW9tZXRyaWMtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTFfMTc3MTY4NTM4NzAwMF9uYTFmbl9hR1Z5YnkxblpXOXRaWFJ5YVdNdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ru0aOP4C0U1uu70FfRul4EaPVJk3U~HG2PkGLwWaxSZUcEyTtk~tbXx1akbrST8mhOwOR9Z1i7at2v~nEum5N5j6YgEljkCzW4oHHVWdhFsyLIUOegcxGgZTIMDKe4zrMe1vGYf1YRfA5fiEenfYZJ~H6knyj1rBtUfZf31Bk~DOIXHDieYTYTRFm2GJVY8k2-NWefNiok2Jt2K5be-RU8nXKFNx8wr4-UGl~D0XtpbkXlPmRqBoFurEZVjC4ZOh-J30j24Js7AGME84hlBxLhlJ4g9sksk5zcaUNGsL5V2eN16WViUBFwwVsW0BXhvCez2wURObTsfvtsQ5prvyjQ__";
+
+
 
 
 const CASE_IA_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-2_1771685385000_na1fn_Y2FzZS1pYS1oZXJv.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTJfMTc3MTY4NTM4NTAwMF9uYTFmbl9ZMkZ6WlMxcFlTMW9aWEp2LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=I~FFvzWdGPdsde-lJwukD2PVXgqSpn8DtWQllfymTUbVWhCWEjhtIj8dkXk4gJFfvAe6Vt1hMvgSanvpNJlPS2uhZSvNBtoDxZn8wxEbr7GBwz91bh1dN5ozG3XCCI99p0b5my9rcwiw1Ch5z3YYcYldR8EiFDaDjPlpuxyOFavT1e~qVfHZmpg5XMQ1VGSt-yoIXwU1Rn8GAUgNFIj7~bAMUpGzhz4GWHYlcTZT~wizTjE4rcUQ3-27lVuC2BQj1Eib4x9a8TCGz8379cc0x~9RWrJwiB2EPEhSmGbieytbzsALTnUe0S516mBh48JThXAeg7ocD1uTOMPad9QjhQ__";
 
 
+
+
 const CASE_PORTFOLIO_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-5_1771685382000_na1fn_Y2FzZS1wb3J0Zm9saW8tcGxhY2Vob2xkZXI.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTVfMTc3MTY4NTM4MjAwMF9uYTFmbl9ZMkZ6WlMxd2IzSjBabTlzYVc4dGNHeGhZMlZvYjJ4a1pYSS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ddQOM3YkZOCP1O~2D1Ah63-gVYfQ9OFbqChcNVSjTVGwFIIkDQ~7V-6ey1BPOPTJ03aGtrztfsEjcibxhuwyqd55RXbHo77Ms-McoTWCRUJJ8uvkCmNhOY2ToOsLiazpTyAM4Kv~yfRORUt~sZKNEhDVLPT1yYU7DEYtaH-j5oxtu0nkkE7WqP0hdWIJI~G81-YKJQv0p8gkslz~nb7b5ghx~qlST72UhISEe5HS7rWt5CZ-8kXEEBDsrjVqF~QLCRyJFYYn3VdKStgVdNItUW-5Ab4lfj0u6qVVHt1DU1-MHf~mxEQgih2tmr3hP4xR6gPyihiVEnUDzPwPqsR58w__";
+
+
 
 
 const ABSTRACT_1 = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-3_1771685367000_na1fn_YWJzdHJhY3QtcGF0dGVybi0x.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTNfMTc3MTY4NTM2NzAwMF9uYTFmbl9ZV0p6ZEhKaFkzUXRjR0YwZEdWeWJpMHgucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=uMOe63-uKhhH87WYCi71ExnhvfbDadWNsQywB1vjjEOYRz8a6oAENRx30hmcRbI1yCTpnQ~Y7ZvcKZOqngNBOBNtvi4uSMV~iHpYv4VAMaoEZTvbIe~oQ8oqZzCwsmf1pU8glkyDJkPUU5-hAMVEGwLQUvy2QQFzzVO2hpBT6IRTO3vlZAkrJ6QiwOl8LnTjaWWkEX~Obnz3Lz7sw3LNl4waGi~SXUajLG2kXPiXFGnLMu69SO3CiJ3feg3doq2sDK3MN7EZhss65Vco1fi62Ziky0b7wW1TMVj66U5MTm04k2kQMHCS1w0MzIC12SZU1V-2mNuGkPh3qaOh6nplOA__";
 
 
+
+
 const PROFILE_PHOTO = "https://res.cloudinary.com/dnbgmiii1/image/upload/v1772475142/1770914698984_y1pqib.jpg";
+
+
 
 
 /* ─── Impact data ─── */
@@ -60,6 +72,8 @@ const impactItems = [
 ];
 
 
+
+
 /* ─── Experience data ─── */
 const experiences = [
   {
@@ -67,10 +81,3 @@ const experiences = [
     company: "Globo",
     period: "Mai 2024 - Ago 2025",
     highlights: [
-      "Liderei gestão estratégica de portfólio que aumentou aderência aos OKRs em 35%",
-      "Viabilizei decisão de investimento em projeto de IA com redução de custos operacionais projetada em ~60%",
-      "Estruturei portfólio executivo usando Jira e Confluence para governança trimestral",
-      "Consolidei KPIs de produto e portfólio em dashboards no Power BI",
-    ],
-  },
-  {
