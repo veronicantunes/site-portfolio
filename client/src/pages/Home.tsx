@@ -22,7 +22,31 @@ import {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 const HERO_BG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-1_1771685387000_na1fn_aGVyby1nZW9tZXRyaWMtYmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTFfMTc3MTY4NTM4NzAwMF9uYTFmbl9hR1Z5YnkxblpXOXRaWFJ5YVdNdFltYy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ru0aOP4C0U1uu70FfRul4EaPVJk3U~HG2PkGLwWaxSZUcEyTtk~tbXx1akbrST8mhOwOR9Z1i7at2v~nEum5N5j6YgEljkCzW4oHHVWdhFsyLIUOegcxGgZTIMDKe4zrMe1vGYf1YRfA5fiEenfYZJ~H6knyj1rBtUfZf31Bk~DOIXHDieYTYTRFm2GJVY8k2-NWefNiok2Jt2K5be-RU8nXKFNx8wr4-UGl~D0XtpbkXlPmRqBoFurEZVjC4ZOh-J30j24Js7AGME84hlBxLhlJ4g9sksk5zcaUNGsL5V2eN16WViUBFwwVsW0BXhvCez2wURObTsfvtsQ5prvyjQ__";
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32,7 +56,31 @@ const CASE_IA_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 const CASE_PORTFOLIO_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-5_1771685382000_na1fn_Y2FzZS1wb3J0Zm9saW8tcGxhY2Vob2xkZXI.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTVfMTc3MTY4NTM4MjAwMF9uYTFmbl9ZMkZ6WlMxd2IzSjBabTlzYVc4dGNHeGhZMlZvYjJ4a1pYSS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ddQOM3YkZOCP1O~2D1Ah63-gVYfQ9OFbqChcNVSjTVGwFIIkDQ~7V-6ey1BPOPTJ03aGtrztfsEjcibxhuwyqd55RXbHo77Ms-McoTWCRUJJ8uvkCmNhOY2ToOsLiazpTyAM4Kv~yfRORUt~sZKNEhDVLPT1yYU7DEYtaH-j5oxtu0nkkE7WqP0hdWIJI~G81-YKJQv0p8gkslz~nb7b5ghx~qlST72UhISEe5HS7rWt5CZ-8kXEEBDsrjVqF~QLCRyJFYYn3VdKStgVdNItUW-5Ab4lfj0u6qVVHt1DU1-MHf~mxEQgih2tmr3hP4xR6gPyihiVEnUDzPwPqsR58w__";
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -42,7 +90,31 @@ const ABSTRACT_1 = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 const PROFILE_PHOTO = "https://res.cloudinary.com/dnbgmiii1/image/upload/v1772475142/1770914698984_y1pqib.jpg";
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,20 +136,3 @@ const impactItems = [
     metric: "22%",
     text: "Redução no tempo de decisão de investimento com métricas executivas",
   },
-  {
-    icon: Briefcase,
-    metric: "50%",
-    text: "Aumento na previsibilidade de entregas com Quarter Plannings e OKR Syncs",
-  },
-];
-
-
-
-
-/* ─── Experience data ─── */
-const experiences = [
-  {
-    role: "Enterprise Agile Coach",
-    company: "Globo",
-    period: "Mai 2024 - Ago 2025",
-    highlights: [
