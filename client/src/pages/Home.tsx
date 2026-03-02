@@ -172,7 +172,7 @@ function HeroSection() {
       />
 
       <div className="container relative z-10 pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl lg:pr-[29rem] xl:pr-[40rem]">
           {/* Label */}
           <motion.p
             initial={{ opacity: 0, x: -20 }}
@@ -274,13 +274,13 @@ function HeroSection() {
           className="hidden lg:block absolute right-8 xl:right-16 top-1/2 -translate-y-1/2"
         >
           <div
-            className="w-56 h-56 xl:w-72 xl:h-72 rounded-full relative overflow-hidden"
+            className="w-[27rem] h-[27rem] xl:w-[36rem] xl:h-[36rem] rounded-full relative overflow-hidden"
             style={{ border: "2px solid #E0E0E0" }}
           >
             <img
               src={PROFILE_PHOTO}
               alt="Verônica Antunes"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[center_25%]"
             />
           </div>
         </motion.div>
