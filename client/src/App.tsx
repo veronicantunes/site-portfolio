@@ -1,16 +1,19 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Router, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import CaseIA from "./pages/CaseIA";
 import CasePlaceholder from "./pages/CasePlaceholder";
 
-function Router() {
+const basePath = import.meta.env.BASE_URL !== "/" ? import.meta.env.BASE_URL.replace(/\/$/, "") : undefined;
+
+function AppRouter() {
   return (
-    <Switch>
+    <Router base={basePath}>
+      <Switch>
       <Route path="/" component={Home} />
       <Route path="/case-ia" component={CaseIA} />
       <Route path="/case-portfolio" component={() => (
@@ -30,6 +33,7 @@ function Router() {
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
+    </Router>
   );
 }
 
@@ -39,7 +43,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <AppRouter />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
