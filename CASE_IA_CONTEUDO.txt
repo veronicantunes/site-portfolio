@@ -19,8 +19,6 @@ Subtítulo:
 Como medir viabilidade, percepção e intenção de adoção de IA generativa em 
 produção audiovisual enterprise
 
-[Imagem Hero - Visualização de inteligência artificial em produção de conteúdo]
-
 
 SEÇÃO 1: CONTEXTO
 ─────────────────────────────────────────────────────────────────────────────
@@ -40,7 +38,7 @@ Cards de Contexto (4 colunas):
 
 3. PAPEL
    Valor: Enterprise Agile Coach
-   Descrição: Liderando projeto de inovação
+   Descrição: Liderança de processo, pesquisa e stakeholder management
 
 4. CENÁRIO
    Valor: IA Generativa
@@ -122,8 +120,8 @@ HIGHLIGHTS DAS 7 SPRINTS:
 ─────────────────────────────────────────────────────────────────────────────
 • 7 ciclos semanais de discovery, teste prático, entrega e feedback
 • 35+ ferramentas de IA testadas ao longo das sprints
-• 60+ profissionais envolvidos (roteiro, direção, arte, fotografia, edição, 
-  VFX, design, sonoplastia, figurino, tecnologia, entre outros)
+• 60+ profissionais envolvidos no laboratório (roteiro, direção, arte, 
+  fotografia, edição, VFX, design, sonoplastia, figurino, tecnologia)
 • Produção de curta-metragem ficcional como proof of concept
 • Documentação contínua de processo, limitações e aprendizados
 • Apresentação executiva com recomendações estratégicas para C-levels
@@ -184,9 +182,9 @@ Descrição: dispostos a integrar IA
 
 IMPACTO ORGANIZACIONAL:
 ─────────────────────────────────────────────────────────────────────────────
-Dados gerados fundamentaram decisão de investimento em IA pela diretoria, com 
-projeção de redução de custos operacionais em ~60% e aumento de produtividade 
-em ~40% nos fluxos de produção audiovisual.
+Dados gerados fundamentaram decisão de investimento em IA pela diretoria. 
+Framework de avaliação informou escolha de ferramentas para adoção, com 
+economia documentada de R$5M+ (referência pública Mobile Time).
 
 
 SEÇÃO 6: APRENDIZADOS
