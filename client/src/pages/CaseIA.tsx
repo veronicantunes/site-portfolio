@@ -1,42 +1,35 @@
 /*
  * Case IA Page - Swiss Editorial Revival
- * Full case study: Laboratório de IA na Globo (Revisado)
- * Sections: Hero, Impact, Context, Challenges, Strategic Decisions, Deliverables, Results, Learnings, Skills
+ * Full case study: Laboratório de IA na Globo
  */
 import Layout from "@/components/Layout";
 import SectionReveal, { StaggerItem } from "@/components/SectionReveal";
-import { useScrollReveal, useCountUp } from "@/hooks/useScrollReveal";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Link } from "wouter";
 import {
   ArrowLeft,
   ArrowRight,
   ChevronRight,
-  AlertTriangle,
-  Target,
   Package,
-  BarChart3,
-  Lightbulb,
-  Calendar,
-  Users,
-  Building2,
-  UserCircle,
-  Lock,
+  Search,
+  FlaskConical,
+  MessageSquare,
+  RefreshCw,
+  Target,
 } from "lucide-react";
-
-const CASE_IA_HERO = "https://private-us-east-1.manuscdn.com/sessionFile/Q4hh0nJv4MAaZJwGicPvcE/sandbox/KXF13z1u3M8PmHW22qtUyj-img-2_1771685385000_na1fn_Y2FzZS1pYS1oZXJv.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvUTRoaDBuSnY0TUFhWkp3R2ljUHZjRS9zYW5kYm94L0tYRjEzejF1M004UG1IVzIycXRVeWotaW1nLTJfMTc3MTY4NTM4NTAwMF9uYTFmbl9ZMkZ6WlMxcFlTMW9aWEp2LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=I~FFvzWdGPdsde-lJwukD2PVXgqSpn8DtWQllfymTUbVWhCWEjhtIj8dkXk4gJFfvAe6Vt1hMvgSanvpNJlPS2uhZSvNBtoDxZn8wxEbr7GBwz91bh1dN5ozG3XCCI99p0b5my9rcwiw1Ch5z3YYcYldR8EiFDaDjPlpuxyOFavT1e~qVfHZmpg5XMQ1VGSt-yoIXwU1Rn8GAUgNFIj7~bAMUpGzhz4GWHYlcTZT~wizTjE4rcUQ3-27lVuC2BQj1Eib4x9a8TCGz8379cc0x~9RWrJwiB2EPEhSmGbieytbzsALTnUe0S516mBh48JThXAeg7ocD1uTOMPad9QjhQ__";
 
 /* ─── Data ─── */
 const impactMetrics = [
   { number: "66%", label: "Redução de lead time", desc: "de 3 meses para 1 mês por cena" },
   { number: "35+", label: "Ferramentas avaliadas", desc: "em 7 semanas de experimentação" },
   { number: "65", label: "Stakeholders engajados", desc: "incluindo C-level" },
-  { number: "R$5M", label: "Economia documentada", desc: "referência pública Mobile Time" },
+  { number: "R$5M", label: "Economia documentada", desc: "framework informou decisão de adoção (ref. pública Mobile Time)" },
 ];
 
 const contextCards = [
   { label: "Empresa", value: "Globo", desc: "Maior grupo de mídia da América Latina" },
   { label: "Período", value: "7 semanas", desc: "Abr – Jun 2024" },
-  { label: "Meu papel", value: "Enterprise Agile Coach", desc: "Ownership de operação e geração de evidências para o COE" },
+  { label: "Meu papel", value: "Enterprise Agile Coach", desc: "Liderança de processo, pesquisa e comunicação com stakeholders para o COE" },
   { label: "Objetivo duplo", value: "Produção + Mapeamento", desc: "Curta-metragem como veículo, mapa de viabilidade como entrega real" },
 ];
 
@@ -46,12 +39,19 @@ const challenges = [
   { number: "03", title: "Gestão de expectativas C-level com invalidações", desc: "Stakeholders executivos acompanhavam semanalmente. Ferramentas promissoras seriam inevitavelmente invalidadas, e o formato de comunicação precisava sustentar confiança mesmo com resultados negativos." },
 ];
 
+const sprintSteps = [
+  { icon: Search, title: "Discovery", description: "Pesquisa de ferramentas, mapeamento de possibilidades e definição de hipóteses para o ciclo" },
+  { icon: FlaskConical, title: "Teste Prático", description: "Produção prática usando as ferramentas selecionadas, testando em etapas reais do curta-metragem" },
+  { icon: Package, title: "Entrega", description: "Consolidação dos resultados do ciclo, documentação de processos e aprendizados" },
+  { icon: MessageSquare, title: "Feedback", description: "Coleta de percepções dos profissionais envolvidos, análise qualitativa e quantitativa" },
+];
+
 const strategicDecisions = [
   { title: "Enquadrar como experimento desde o dia zero", desc: "Decidi posicionar o laboratório como discovery, não como entrega garantida. Stakeholders C-level entraram com mentalidade de aprendizado, o que permitiu invalidar ferramentas sem fricção. A melhor gestão de expectativas é a que previne conflito, não a que resolve.", tag: "Trade-off: abrir mão de 'prometer resultado' para ganhar liberdade de experimentação", tagType: "tradeoff" },
   { title: "Deixar critérios de invalidação emergirem da prática", desc: "Em vez de definir critérios a priori, permiti que as 7 semanas de experimentação revelassem o que tornava uma ferramenta viável ou inviável. Os times, organizados por pipeline de produção, construíram coletivamente três lentes de avaliação: técnica, negócio e operacional.", tag: "Resultado: framework de avaliação reutilizável pelo COE", tagType: "outcome" },
   { title: "System demos semanais como mecanismo de transparência radical", desc: "Implementei reviews semanais onde os 6 times apresentavam resultados reais, não slides. Ferramentas eram classificadas ao vivo como 'não válidas para o processo neste momento', com critérios de avaliação compartilhados. Isso eliminava surpresas e mantinha 65 stakeholders alinhados.", tag: "Trade-off: exposição alta (risco de parecer 'pouco progresso') por transparência e confiança", tagType: "tradeoff" },
   { title: "Priorizar velocidade de descoberta sobre profundidade técnica", desc: "Com 35+ ferramentas e apenas 7 semanas, a decisão foi testar amplitude antes de profundidade. Sprints semanais com ciclo completo garantiam aprendizado incremental. Ferramentas promissoras recebiam mais investimento nos ciclos seguintes, as demais eram descartadas rapidamente.", tag: "Resultado: time-to-learning reduzido, decisões de investimento mais informadas", tagType: "outcome" },
-  { title: "Pesquisa estruturada como entrega paralela", desc: "Decidi que dados de percepção dos profissionais tinham tanto valor quanto métricas de produção. Conduzi pesquisa com 20 participantes medindo produtividade percebida, carga cognitiva e intenção de adoção. Números sozinhos não capturam nuances emocionais.", tag: "Resultado: dados quali + quanti que fundamentaram decisão de investimento pela diretoria", tagType: "outcome" },
+  { title: "Pesquisa estruturada como entrega paralela", desc: "Defendi que dados de percepção dos profissionais tinham tanto valor quanto métricas de produção. Conduzi pesquisa com 20 participantes medindo produtividade percebida, carga cognitiva e intenção de adoção. Números sozinhos não capturam nuances emocionais.", tag: "Resultado: dados quali + quanti que fundamentaram decisão de investimento pela diretoria", tagType: "outcome" },
 ];
 
 const deliverables = [
@@ -87,7 +87,7 @@ const caseSkills = [
 
 /* ─── Impact Counter ─── */
 function ImpactCard({ number, label, desc, index }: { number: string; label: string; desc: string; index: number }) {
-  const { ref, isVisible } = useScrollReveal(0.2);
+  const { ref } = useScrollReveal(0.2);
 
   return (
     <StaggerItem index={index}>
@@ -140,7 +140,7 @@ export default function CaseIA() {
               De experimento a ativo estratégico: validação de IA generativa em produção audiovisual<span style={{ color: "#FF5722" }}>.</span>
             </h1>
             <p className="text-base md:text-lg leading-relaxed max-w-3xl" style={{ color: "#666666" }}>
-              Como estruturei um laboratório de 7 semanas para transformar incerteza organizacional em critérios de decisão de investimento, conectando experimentação prática à governança corporativa de IA.
+              Como liderei as frentes de processo, pesquisa e stakeholder management em um laboratório de 7 semanas, transformando incerteza organizacional em critérios de decisão de investimento para governança corporativa de IA.
             </p>
           </SectionReveal>
         </div>
@@ -232,6 +232,123 @@ export default function CaseIA() {
         </div>
       </section>
 
+      {/* Sprints Semanais */}
+      <section className="py-16 md:py-24 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
+        <div className="container">
+          <SectionReveal>
+            <div className="flex items-center gap-3 mb-3">
+            <span className="inline-block text-xs uppercase tracking-[0.2em] font-sans px-3 py-1.5 mb-6" style={{ backgroundColor: "rgba(255,87,34,0.1)", color: "#FF5722" }}>Abordagem</span>
+     
+            </div>
+            <h2 className="font-serif mb-4" style={{ color: "#333333", fontWeight: 900, fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+              Sprints semanais<span style={{ color: "#FF5722" }}>.</span>
+            </h2>
+            <p className="text-base leading-relaxed mb-10 max-w-3xl" style={{ color: "#666666" }}>
+              Implementamos ciclos semanais inspirados no Scrum, sem nomeá-lo formalmente, evitando resistência em equipes de contextos mais tradicionais. Cada semana seguia o mesmo ciclo: discovery, teste prático, entrega e coleta de feedback, gerando aprendizado incremental a cada iteração para todos os envolvidos.
+            </p>
+          </SectionReveal>
+
+          <SectionReveal delay={0.1}>
+            <div className="relative mb-12">
+              <div className="hidden md:block">
+                <div className="relative mx-auto" style={{ width: "100%", height: "650px", maxWidth: "1200px", margin: "0 auto" }}>
+                  <div className="absolute" style={{ left: "50%", top: "50%", transform: "translate(-50%, -50%)", width: "400px", height: "400px" }}>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
+                      <RefreshCw size={28} style={{ color: "#FF5722" }} className="mb-2" />
+                      <span className="font-serif text-3xl block" style={{ color: "#FF5722", fontWeight: 900 }}>7</span>
+                      <span className="text-xs uppercase tracking-[0.15em] font-sans" style={{ color: "#666666" }}>sprints semanais</span>
+                    </div>
+
+                    <svg className="absolute inset-0" viewBox="0 0 500 500" fill="none">
+                      <circle cx="250" cy="250" r="160" stroke="#E0E0E0" strokeWidth="1.5" fill="none" />
+                      <circle cx="250" cy="250" r="160" stroke="#FF5722" strokeWidth="2.5" fill="none" strokeDasharray="10 14" opacity="0.35" />
+                      <path d="M 330 95 Q 385 130 405 185" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 405 315 Q 385 370 330 405" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 170 405 Q 115 370 95 315" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <path d="M 95 185 Q 115 130 170 95" stroke="#FF5722" strokeWidth="2" fill="none" opacity="0.4" markerEnd="url(#arrowhead)" />
+                      <defs>
+                        <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                          <path d="M 0 0 L 8 4 L 0 8 Z" fill="#FF5722" opacity="0.5" />
+                        </marker>
+                      </defs>
+                    </svg>
+
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "60px", left: "50%", transform: "translateX(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", right: "60px", transform: "translateY(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ bottom: "60px", left: "50%", transform: "translateX(-50%)" }} />
+                    <div className="absolute w-3 h-3 rounded-full bg-[#FF5722]" style={{ top: "50%", left: "60px", transform: "translateY(-50%)" }} />
+                  </div>
+
+                  <div className="absolute text-center" style={{ top: "30px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
+                    <div className="w-11 h-11 mx-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <Search size={20} style={{ color: "#FF5722" }} />
+                    </div>
+                    <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[0].title}</p>
+                    <p className="text-[12px] leading-tight" style={{ color: "#666666", wordSpacing: "0.05em" }}>{sprintSteps[0].description}</p>
+                  </div>
+
+                  <div className="absolute" style={{ top: "50%", right: "30px", transform: "translateY(-50%)", width: "220px" }}>
+                    <div className="w-11 h-11 mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <FlaskConical size={20} style={{ color: "#FF5722" }} />
+                    </div>
+                    <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[1].title}</p>
+                    <p className="text-[12px] leading-tight" style={{ color: "#666666", wordSpacing: "0.05em" }}>{sprintSteps[1].description}</p>
+                  </div>
+
+                  <div className="absolute text-center" style={{ bottom: "30px", left: "50%", transform: "translateX(-50%)", width: "260px" }}>
+                    <p className="text-[12px] leading-tight mb-1" style={{ color: "#666666", wordSpacing: "0.05em" }}>{sprintSteps[2].description}</p>
+                    <p className="font-serif text-sm mb-2" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[2].title}</p>
+                    <div className="w-11 h-11 mx-auto flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <Package size={20} style={{ color: "#FF5722" }} />
+                    </div>
+                  </div>
+
+                  <div className="absolute text-right" style={{ top: "50%", left: "30px", transform: "translateY(-50%)", width: "220px" }}>
+                    <div className="w-11 h-11 ml-auto mb-2 flex items-center justify-center rounded-full bg-white" style={{ border: "2px solid rgba(255,87,34,0.3)", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                      <MessageSquare size={20} style={{ color: "#FF5722" }} />
+                    </div>
+                    <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{sprintSteps[3].title}</p>
+                    <p className="text-[12px] leading-tight" style={{ color: "#666666", wordSpacing: "0.05em" }}>{sprintSteps[3].description}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:hidden space-y-4">
+                {sprintSteps.map((step, i) => {
+                  const Icon = step.icon;
+                  return (
+                    <div key={i}>
+                      <div className="flex gap-4 items-start p-4 bg-white border border-[#E0E0E0]">
+                        <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full" style={{ backgroundColor: "rgba(255,87,34,0.08)" }}>
+                          <Icon size={18} style={{ color: "#FF5722" }} />
+                        </div>
+                        <div>
+                          <p className="font-serif text-sm mb-1" style={{ color: "#333333", fontWeight: 700 }}>{step.title}</p>
+                          <p className="text-xs leading-relaxed" style={{ color: "#666666" }}>{step.description}</p>
+                        </div>
+                      </div>
+                      {i < sprintSteps.length - 1 && (
+                        <div className="flex justify-center py-1">
+                          <ChevronRight size={16} style={{ color: "#FF5722", transform: "rotate(90deg)" }} />
+                        </div>
+                      )}
+                      {i === sprintSteps.length - 1 && (
+                        <div className="flex justify-center py-2">
+                          <div className="flex items-center gap-2">
+                            <RefreshCw size={14} style={{ color: "#FF5722" }} />
+                            <span className="text-xs font-sans" style={{ color: "#FF5722" }}>Repeat × 7</span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
       {/* Strategic Decisions */}
       <section className="py-16 md:py-24 border-t border-[#E0E0E0]" style={{ backgroundColor: "#FAFAFA" }}>
         <div className="container">
@@ -241,7 +358,7 @@ export default function CaseIA() {
               O que decidi e por quê<span style={{ color: "#FF5722" }}>.</span>
             </h2>
             <p className="text-base leading-relaxed max-w-3xl mb-10" style={{ color: "#666666" }}>
-              O papel de PO neste contexto não era gerenciar backlog, era tomar decisões que definiam as condições do experimento e a qualidade das evidências geradas.
+              Meu papel neste contexto não era gerenciar backlog, era liderar as frentes que definiam as condições do experimento e a qualidade das evidências geradas.
             </p>
           </SectionReveal>
 
@@ -302,7 +419,6 @@ export default function CaseIA() {
           </SectionReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            {/* Efficiency Metrics */}
             <div className="p-6 md:p-8 bg-white border border-[#E0E0E0]">
               <p className="text-xs uppercase tracking-[0.15em] font-sans mb-5" style={{ color: "#999999" }}>
                 Métricas de eficiência
@@ -317,7 +433,6 @@ export default function CaseIA() {
               </div>
             </div>
 
-            {/* Perception Research */}
             <div className="p-6 md:p-8 bg-white border border-[#E0E0E0]">
               <p className="text-xs uppercase tracking-[0.15em] font-sans mb-5" style={{ color: "#999999" }}>
                 Pesquisa de percepção (20 participantes)
@@ -336,7 +451,6 @@ export default function CaseIA() {
             </div>
           </div>
 
-          {/* Organizational Impact */}
           <SectionReveal delay={0.2}>
             <div className="p-6 md:p-8 bg-white border border-[#E0E0E0]">
               <p className="text-xs uppercase tracking-[0.15em] font-sans mb-4" style={{ color: "#999999" }}>
@@ -359,7 +473,6 @@ export default function CaseIA() {
             </div>
           </SectionReveal>
 
-          {/* Limitation */}
           <SectionReveal delay={0.3}>
             <div className="p-6 md:p-8 bg-white border border-[#E0E0E0]">
               <p className="text-sm mb-3" style={{ color: "#333333", fontWeight: 700 }}>

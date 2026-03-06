@@ -46,13 +46,13 @@ const impactItems = [
   },
   {
     icon: BarChart3,
-    metric: "22%",
+    metric: "~22%",
     text: "Redução no tempo de decisão de investimento com métricas executivas",
   },
   {
     icon: Briefcase,
-    metric: "50%",
-    text: "Aumento na previsibilidade de entregas com Quarter Plannings e OKR Syncs",
+    metric: "~30%",
+    text: "Redução de retrabalho com Quarter Plannings e OKR Syncs",
   },
 ];
 
@@ -76,8 +76,8 @@ const experiences = [
     highlights: [
       "Estabeleci implementação de práticas ágeis que aumentou clareza de objetivos em ~40%",
       "Reduzi retrabalho em ~30% após readequação de rituais e Quarter Planning",
-      "Aumentei velocidade de entrega dos times em 20% através de práticas de priorização",
-      "Promovi visibilidade de valor que elevou satisfação dos stakeholders em 31%",
+      "Aumentei velocidade de entrega dos times em ~20% por meio de práticas de priorização",
+      "Promovi visibilidade de valor que elevou a satisfação dos stakeholders",
     ],
   },
   {
@@ -85,9 +85,9 @@ const experiences = [
     company: "Globo",
     period: "Abr 2021 - Abr 2023",
     highlights: [
-      "Coordenei implementação de práticas ágeis que aumentou previsibilidade de entrega em 30%",
-      "Reduzi lead time das sprints em 21% com readequação de cerimônias e fluxos",
-      "Alinhei OKRs de time que aumentaram entrega de valor em 25%",
+      "Coordenei implementação de práticas ágeis que aumentou previsibilidade de entrega em ~30%",
+      "Reduzi lead time das sprints em ~21% com readequação de cerimônias e fluxos",
+      "Alinhei OKRs de time que aumentaram entrega de valor em ~25%",
     ],
   },
   {
@@ -97,7 +97,7 @@ const experiences = [
     highlights: [
       "Conduzi discovery que identificou problemas estruturais de usabilidade",
       "Facilitei 10+ dinâmicas de discovery com entrevistas e pesquisas",
-      "Reduzi inconsistências entre soluções em 40% com disseminação de práticas de escrita",
+      "Reduzi inconsistências entre soluções com disseminação de práticas de escrita",
     ],
   },
   {
@@ -105,9 +105,9 @@ const experiences = [
     company: "everis",
     period: "Ago 2019 - Mai 2020",
     highlights: [
-      "Concebi fluxos conversacionais que reduziram taxa de abandono em 27%",
-      "Aumentei satisfação dos usuários em 18% nas URAs e chatbots",
-      "Identifiquei pontos de fricção que geraram redução de 22% nas chamadas de suporte",
+      "Concebi fluxos conversacionais que reduziram taxa de abandono em canais de alto volume",
+      "Aumentei satisfação dos usuários nas URAs e chatbots após revisões de conteúdo",
+      "Identifiquei pontos de fricção que geraram redução nas chamadas de suporte",
     ],
   },
   {
@@ -116,8 +116,8 @@ const experiences = [
     period: "Jul 2018 - Ago 2019",
     highlights: [
       "Conduzi 20+ pesquisas qualitativas e quantitativas em produtos B2B2C",
-      "Trabalhei diretamente com 3 POs e designers na definição de hipóteses",
-      "Aumentei coerência entre experiência e objetivos de negócio em 45%",
+      "Trabalhei diretamente com 3 POs e designers na definição de hipóteses e validações",
+      "Aumentei coerência entre experiência de produto e objetivos de negócio",
     ],
   },
 ];
@@ -220,9 +220,9 @@ function HeroSection() {
           >
             {[
               "+10 anos em gestão de produto e portfólio",
-              "+5 fluxos de valor",
-              "+100 OKRs desdobrados",
-              "+3 produtos de IA",
+              "Value stream enterprise (60+ pessoas)",
+              "100+ OKRs geridos em 3 camadas",
+              "Portfólio com 4 iniciativas de IA",
             ].map((item, i) => (
               <span key={i} className="text-[15px] leading-relaxed whitespace-nowrap" style={{ color: "#666666" }}>
                 {i > 0 && <span className="mr-6" style={{ color: "#E0E0E0" }}>&bull;</span>}
@@ -564,8 +564,8 @@ function CasesSection() {
                   </p>
                   <div className="flex gap-4 mb-5">
                     {[
-                      { num: "10+", label: "ferramentas" },
-                      { num: "15", label: "profissionais" },
+                      { num: "35+", label: "ferramentas" },
+                      { num: "20", label: "participantes" },
                       { num: "1", label: "framework" },
                     ].map((m, i) => (
                       <div key={i} className="text-center">
