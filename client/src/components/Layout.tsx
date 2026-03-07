@@ -74,7 +74,7 @@ function Header() {
             </span>
           </Link>
 
-          <Link href="https://www.linkedin.com/in/veronicantunes/"
+          <a href="https://www.linkedin.com/in/veronicantunes/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -84,7 +84,7 @@ function Header() {
             >
               LinkedIn
             </span>
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile menu button */}
