@@ -225,7 +225,7 @@ function HeroSection() {
           >
             {[
               "+10 anos em gestão de produto e portfólio",
-              "Value stream enterprise (60+ pessoas)",
+              "Value Stream enterprise (60+ pessoas)",
               "100+ OKRs geridos em 3 camadas",
               "Portfólio com 4 iniciativas de IA",
             ].map((item, i) => (

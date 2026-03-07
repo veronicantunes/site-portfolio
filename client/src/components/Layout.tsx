@@ -59,11 +59,12 @@ function Header() {
           <Link href="/">
             <span
               className="text-xs uppercase tracking-[0.15em] font-sans font-normal transition-colors duration-300 hover:text-[#FF5722]"
-              style={{ color: location === "/" ? "#FF5722" : "#555555" }}
+              style={{ color: "#555555" }}
             >
               Home
             </span>
           </Link>
+
           <Link href="/#cases" onClick={handleCasesClick}>
             <span
               className="text-xs uppercase tracking-[0.15em] font-sans font-normal transition-colors duration-300 hover:text-[#FF5722]"
@@ -72,15 +73,18 @@ function Header() {
               Cases
             </span>
           </Link>
-          <a
-            href="https://www.linkedin.com/in/veronicantunes/"
+
+          <Link href="https://www.linkedin.com/in/veronicantunes/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs uppercase tracking-[0.15em] font-sans font-normal transition-colors duration-300 hover:text-[#FF5722]"
-            style={{ color: "#555555" }}
           >
-            LinkedIn
-          </a>
+            <span
+              className="text-xs uppercase tracking-[0.15em] font-sans font-normal transition-colors duration-300 hover:text-[#FF5722]"
+              style={{ color: "#FF5722" }}
+            >
+              LinkedIn
+            </span>
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
