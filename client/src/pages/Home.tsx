@@ -211,7 +211,9 @@ function HeroSection() {
             className="font-serif italic text-xl md:text-2xl mb-4"
             style={{ color: "#555555", fontWeight: 400 }}
           >
-            Conecto estratégia e execução para acelerar valor de produto
+            Conecto estratégia e execução
+            <br />
+            para acelerar valor de produto
           </motion.p>
 
           {/* Subtitle - improved distribution */}
