@@ -172,17 +172,7 @@ function HeroSection() {
       />
 
       <div className="container relative z-10 pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="max-w-4xl lg:pr-[29rem] xl:pr-[40rem]">
-          {/* Label */}
-          <motion.p
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs uppercase tracking-[0.2em] font-sans font-normal mb-6"
-            style={{ color: "#FF5722" }}
-          >
-            AI Product Owner
-          </motion.p>
+        <div className="max-w-4xl lg:pr-[29rem] xl:pr-[25rem]">
 
           {/* Name */}
           <motion.h1
@@ -199,6 +189,19 @@ function HeroSection() {
           >
             Verônica Antunes<span style={{ color: "#FF5722" }}>.</span>
           </motion.h1>
+
+          {/* Label */}
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xs uppercase tracking-[0.2em] font-sans font-normal mb-6 mt-6"
+            style={{ color: "#FF5722" }}
+          >
+            Product Owner (A-CSPO) | Product Manager
+            <br />
+            Product Strategy & Discovery | Agile Specialist 
+          </motion.p>
 
           {/* Tagline */}
           <motion.p
