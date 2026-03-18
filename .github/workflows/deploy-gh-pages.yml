@@ -13,21 +13,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4.4.0
         with:
           node-version: "24"
           cache: "pnpm"
-
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build:gh-pages
       - name: Setup 404 for SPA routing
         run: cp dist/public/index.html dist/public/404.html
       - name: Add .nojekyll
         run: touch dist/public/.nojekyll
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: dist/public
   deploy:
@@ -39,4 +37,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
