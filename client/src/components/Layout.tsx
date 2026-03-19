@@ -208,12 +208,12 @@ function Footer() {
                 LinkedIn
               </a>
               <a
-                href="mailto:veronicantunesf@gmail.com"
+                href="mailto:contato@veronicantunes.com.br"
                 className="text-sm flex items-center gap-2 transition-colors duration-300 hover:text-[#FF5722]"
                 style={{ color: "#555555" }}
               >
                 <Mail size={14} />
-                veronicantunesf@gmail.com
+                contato@veronicantunes.com.br
               </a>
             </div>
           </div>
