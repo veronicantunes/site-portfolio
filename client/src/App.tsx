@@ -27,7 +27,7 @@ function AppRouter() {
         <CasePlaceholder
           title="OKRs em Ambiente de Alta Complexidade"
           badge="Agilidade | Transformação"
-          description="Como implementar OKRs em organizações de grande porte, conectando objetivos estratégicos a entregas de valor mensuráveis em múltiplos value streams."
+          description="Como implementar OKRs em organizações de grande porte, conectando objetivos estratégicos a entregas de valor mensuráveis em um value stream de +60 pessoas e 9 squads."
         />
       )} />
       <Route path="/404" component={NotFound} />

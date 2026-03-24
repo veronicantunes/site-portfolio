@@ -37,7 +37,7 @@ const impactItems = [
   {
     icon: Target,
     metric: "35%",
-    text: "Aumento na precisão de priorização com portfólio executivo alinhado a OKRs",
+    text: "Aumento na aderência aos OKRs com portfólio executivo alinhado a OKRs",
   },
   {
     icon: TrendingUp,
@@ -64,7 +64,7 @@ const experiences = [
     period: "Mai 2024 - Ago 2025",
     highlights: [
       "Liderei gestão estratégica de portfólio que aumentou aderência aos OKRs em 35%",
-      "Viabilizei decisão de investimento em projeto de IA com redução de custos operacionais projetada em ~60%",
+      "Viabilizei decisão de investimento em projeto de IA com elevação de produtividade em fluxos críticos de ~60%",
       "Estruturei portfólio executivo usando Jira e Confluence para governança trimestral",
       "Consolidei KPIs de produto e portfólio em dashboards no Power BI",
     ],
@@ -220,7 +220,7 @@ function HeroSection() {
           >
             {[
               "+10 anos em digital",
-              "+10 fluxos de valor",
+              "+60 pessoas em 1 value stream",
               "+100 OKRs desdobrados",
               "+5 produtos de IA",
             ].map((item, i) => (

@@ -380,7 +380,7 @@ function AboutSection() {
                   {[
                     "Gestão de portfólio, product discovery, definição de OKRs e priorização baseada em ROI",
                     "JIRA, Confluence, Miro, SQL, Power BI e ferramentas de ML para prototipagem e análise",
-                    "Atuação consistente em estratégia de produto, alinhamento entre negócio e tecnologia e coordenação de value streams",
+                    "Atuação consistente em estratégia de produto, alinhamento entre negócio e tecnologia e liderança de value stream",
                   ].map((item, i) => (
                     <li key={i} className="text-[15px] leading-relaxed pl-4 border-l" style={{ color: "#666666", borderColor: "#E0E0E0" }}>
                       {item}
