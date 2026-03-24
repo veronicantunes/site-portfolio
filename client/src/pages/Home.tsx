@@ -37,7 +37,7 @@ const impactItems = [
   {
     icon: Target,
     metric: "35%",
-    text: "Aumento na precisão de priorização com portfólio executivo alinhado a OKRs",
+    text: "Aumento na aderência aos OKRs com portfólio executivo alinhado a OKRs",
   },
   {
     icon: TrendingUp,
@@ -64,7 +64,7 @@ const experiences = [
     period: "Mai 2024 - Ago 2025",
     highlights: [
       "Liderei gestão estratégica de portfólio que aumentou aderência aos OKRs em 35%",
-      "Viabilizei decisão de investimento em projeto de IA com redução de custos operacionais projetada em ~60%",
+      "Viabilizei decisão de investimento em projeto de IA com elevação de produtividade em fluxos críticos de ~60%",
       "Estruturei portfólio executivo usando Jira e Confluence para governança trimestral",
       "Consolidei KPIs de produto e portfólio em dashboards no Power BI",
     ],
@@ -667,7 +667,7 @@ function CasesSection() {
                     OKRs em Ambiente de Alta Complexidade
                   </h3>
                   <p className="text-[15px] leading-relaxed" style={{ color: "#999999" }}>
-                    Como implementei OKRs em múltiplos times simultaneamente, conectando objetivos de negócio a entregas técnicas com rituais de acompanhamento contínuo.
+                    Como implementei OKRs conectando objetivos de negócio a entregas de valor mensuráveis em um value stream de +60 pessoas e 9 squads.
                   </p>
                 </div>
               </div>
