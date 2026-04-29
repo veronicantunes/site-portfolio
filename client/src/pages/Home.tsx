@@ -37,7 +37,7 @@ const impactItems = [
   {
     icon: Target,
     metric: "35%",
-    text: "Aumento na aderência aos OKRs com portfólio executivo alinhado a OKRs",
+    text: "Aumento na aderência aos OKRs com portfólio executivo e governança trimestral",
   },
   {
     icon: TrendingUp,
@@ -198,9 +198,9 @@ function HeroSection() {
             className="text-xs uppercase tracking-[0.2em] font-sans font-normal mb-6 mt-6"
             style={{ color: "#FF5722" }}
           >
-            Product Owner (A-CSPO) | Product Manager
+            Product & Innovation Leader | Transformação Digital
             <br />
-            Product Strategy & Discovery | Agile Specialist 
+            Agilidade Enterprise | IA Aplicada 
           </motion.p>
 
           {/* Tagline */}
@@ -211,9 +211,9 @@ function HeroSection() {
             className="font-serif italic text-xl md:text-2xl mb-4"
             style={{ color: "#555555", fontWeight: 400 }}
           >
-            Conecto estratégia e execução
+            Conecto estratégia, inovação e execução
             <br />
-            para acelerar valor de produto
+            para acelerar valor do negócio
           </motion.p>
 
           {/* Subtitle - improved distribution */}
